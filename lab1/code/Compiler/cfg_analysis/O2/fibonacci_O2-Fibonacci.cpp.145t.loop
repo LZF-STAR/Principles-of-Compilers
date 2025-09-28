@@ -1,0 +1,105 @@
+
+;; Function main (main, funcdef_no=1808, decl_uid=44612, cgraph_uid=542, symbol_order=572) (executed once)
+
+int main ()
+{
+  char_type D.49557;
+  char_type D.49554;
+  char_type D.49551;
+  char_type D.49548;
+  int n;
+  int i;
+  int b;
+  int a;
+  int n.0_1;
+  struct basic_ostream & _9;
+  struct basic_ostream & _11;
+  struct basic_ostream & _15;
+  int (*) () * _20;
+  long int _21;
+  sizetype _22;
+  struct basic_ios * _23;
+  struct basic_ostream & _25;
+  const struct __ctype_type * _27;
+  char _30;
+  char _32;
+  char _34;
+  int (*) () * _35;
+  int (*) () _36;
+  void * PROF_39;
+  int n.0_40;
+  char _41;
+
+  <bb 2> [local count: 118111600]:
+  std::basic_istream<char>::operator>> (&cin, &n);
+  _9 = std::basic_ostream<char>::operator<< (&cout, 0);
+  std::endl.isra (_9);
+  _11 = std::basic_ostream<char>::operator<< (&cout, 1);
+  std::endl.isra (_11);
+  n.0_40 = n;
+  if (n.0_40 > 1)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 10>; [11.00%]
+
+  <bb 3> [local count: 952547452]:
+  # a_47 = PHI <b_42(9), 0(2)>
+  # b_42 = PHI <b_13(9), 1(2)>
+  # i_48 = PHI <i_16(9), 1(2)>
+  b_13 = b_42 + a_47;
+  _15 = std::basic_ostream<char>::operator<< (&cout, b_13);
+  _20 = _15->_vptr.basic_ostream;
+  _21 = MEM[(long int *)_20 + -24B];
+  _22 = (sizetype) _21;
+  _23 = _15 + _22;
+  _27 = MEM[(const struct __ctype_type * *)_23 + 240B];
+  if (_27 == 0B)
+    goto <bb 4>; [0.04%]
+  else
+    goto <bb 5>; [99.96%]
+
+  <bb 4> [local count: 381018]:
+  std::__throw_bad_cast ();
+
+  <bb 5> [local count: 952166433]:
+  _30 = MEM[(const struct ctype *)_27]._M_widen_ok;
+  if (_30 != 0)
+    goto <bb 6>; [51.12%]
+  else
+    goto <bb 7>; [48.88%]
+
+  <bb 6> [local count: 486747484]:
+  _32 = MEM[(const struct ctype *)_27]._M_widen[10];
+  goto <bb 9>; [100.00%]
+
+  <bb 7> [local count: 465418949]:
+  std::ctype<char>::_M_widen_init (_27);
+  _35 = MEM[(const struct ctype *)_27].D.37636._vptr.facet;
+  _36 = MEM[(int (*) () *)_35 + 48B];
+  PROF_39 = [obj_type_ref] OBJ_TYPE_REF(_36;(const struct ctype)_27->6);
+  if (PROF_39 == do_widen)
+    goto <bb 9>; [80.00%]
+  else
+    goto <bb 8>; [20.00%]
+
+  <bb 8> [local count: 93083792]:
+  _41 = OBJ_TYPE_REF(_36;(const struct ctype)_27->6) (_27, 10);
+
+  <bb 9> [local count: 952166435]:
+  # _34 = PHI <_32(6), 10(7), _41(8)>
+  _25 = std::basic_ostream<char>::put (_15, _34);
+  std::basic_ostream<char>::flush (_25);
+  i_16 = i_48 + 1;
+  n.0_1 = n;
+  if (n.0_1 > i_16)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 10>; [11.00%]
+
+  <bb 10> [local count: 117730583]:
+  n ={v} {CLOBBER};
+  return 0;
+
+}
+
+

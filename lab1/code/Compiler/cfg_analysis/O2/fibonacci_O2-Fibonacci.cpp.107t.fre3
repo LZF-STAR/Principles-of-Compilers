@@ -1,0 +1,287 @@
+
+;; Function std::ctype<char>::do_widen (_ZNKSt5ctypeIcE8do_widenEc, funcdef_no=1561, decl_uid=37570, cgraph_uid=532, symbol_order=561)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+char_type std::ctype<char>::do_widen (const struct ctype * const this, char __c)
+{
+  <bb 2> [local count: 1073741824]:
+  return __c_1(D);
+
+}
+
+
+
+;; Function std::endl.isra (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0, funcdef_no=2298, decl_uid=49501, cgraph_uid=1045, symbol_order=1223)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8 9
+;; 2 succs { 3 4 }
+;; 3 succs { }
+;; 4 succs { 5 6 }
+;; 5 succs { 9 }
+;; 6 succs { 8 7 }
+;; 7 succs { 8 }
+;; 8 succs { 9 }
+;; 9 succs { 1 }
+Determining dynamic type for call: _27 = OBJ_TYPE_REF(_22;(const struct ctype)_13->6) (_13, 10);
+  Starting walk at: _21 = MEM[(const struct ctype *)_13].D.37636._vptr.facet;
+  instance pointer: _13  Outer instance pointer: _13 offset: 0 (bits) vtbl reference: MEM[(const struct ctype *)_13].D.37636._vptr.facet
+  Function call may change dynamic type:std::ctype<char>::_M_widen_init (_13);
+  No dynamic type change found.
+  Targets of polymorphic call of type 1:struct ctype token 6
+    Outer type (dynamic):struct ctype (or a derived type) offset 0
+    This is partial list; extra targets may be defined in other units. (derived types included)
+       virtual std::ctype<char>::char_type std::ctype<char>::do_widen(char) const/561
+
+void std::endl.isra (struct basic_ostream & __os)
+{
+  char_type D.49538;
+  char_type D.49535;
+  char_type D.49532;
+  char_type D.49529;
+  int (*) () * _2;
+  long int _3;
+  sizetype _4;
+  struct basic_ios * _5;
+  struct basic_ostream & _7;
+  struct basic_ostream & _8;
+  const struct __ctype_type * _13;
+  char _16;
+  char _18;
+  char _20;
+  int (*) () * _21;
+  int (*) () _22;
+  char _23;
+  void * PROF_25;
+  char _27;
+
+  <bb 2> [local count: 1073741824]:
+  _2 = __os_1(D)->_vptr.basic_ostream;
+  _3 = MEM[(long int *)_2 + -24B];
+  _4 = (sizetype) _3;
+  _5 = __os_1(D) + _4;
+  _13 = MEM[(const struct __ctype_type * *)_5 + 240B];
+  if (_13 == 0B)
+    goto <bb 3>; [0.04%]
+  else
+    goto <bb 4>; [99.96%]
+
+  <bb 3> [local count: 429496]:
+  std::__throw_bad_cast ();
+
+  <bb 4> [local count: 1073312329]:
+  _16 = MEM[(const struct ctype *)_13]._M_widen_ok;
+  if (_16 != 0)
+    goto <bb 5>; [51.12%]
+  else
+    goto <bb 6>; [48.88%]
+
+  <bb 5> [local count: 548677267]:
+  _18 = MEM[(const struct ctype *)_13]._M_widen[10];
+  goto <bb 9>; [100.00%]
+
+  <bb 6> [local count: 524635063]:
+  std::ctype<char>::_M_widen_init (_13);
+  _21 = MEM[(const struct ctype *)_13].D.37636._vptr.facet;
+  _22 = MEM[(int (*) () *)_21 + 48B];
+  PROF_25 = [obj_type_ref] OBJ_TYPE_REF(_22;(const struct ctype)_13->6);
+  if (PROF_25 == do_widen)
+    goto <bb 8>; [80.00%]
+  else
+    goto <bb 7>; [20.00%]
+
+  <bb 7> [local count: 104927014]:
+  _27 = OBJ_TYPE_REF(_22;(const struct ctype)_13->6) (_13, 10);
+
+  <bb 8> [local count: 524635063]:
+  # _23 = PHI <_27(7), 10(6)>
+
+  <bb 9> [local count: 1073312330]:
+  # _20 = PHI <_18(5), _23(8)>
+  _7 = std::basic_ostream<char>::put (__os_1(D), _20);
+  _8 = std::basic_ostream<char>::flush (_7);
+  return;
+
+}
+
+
+
+;; Function main (main, funcdef_no=1808, decl_uid=44612, cgraph_uid=542, symbol_order=572) (executed once)
+
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8 9 10 11 12
+;;
+;; Loop 1
+;;  header 11, latch 10
+;;  depth 1, outer 0
+;;  nodes: 11 10 6 9 8 7 5 3
+;; 2 succs { 11 }
+;; 3 succs { 4 5 }
+;; 4 succs { }
+;; 5 succs { 6 7 }
+;; 6 succs { 10 }
+;; 7 succs { 9 8 }
+;; 8 succs { 9 }
+;; 9 succs { 10 }
+;; 10 succs { 11 }
+;; 11 succs { 3 12 }
+;; 12 succs { 1 }
+Determining dynamic type for call: _41 = OBJ_TYPE_REF(_36;(const struct ctype)_27->6) (_27, 10);
+  Starting walk at: _35 = MEM[(const struct ctype *)_27].D.37636._vptr.facet;
+  instance pointer: _27  Outer instance pointer: _27 offset: 0 (bits) vtbl reference: MEM[(const struct ctype *)_27].D.37636._vptr.facet
+  Function call may change dynamic type:std::ctype<char>::_M_widen_init (_27);
+  Function call may change dynamic type:_15 = std::basic_ostream<char>::operator<< (&cout, b_13);
+  Function call may change dynamic type:std::endl.isra (_11);
+  Function call may change dynamic type:_11 = std::basic_ostream<char>::operator<< (&cout, 1);
+  Function call may change dynamic type:std::endl.isra (_9);
+  Function call may change dynamic type:_9 = std::basic_ostream<char>::operator<< (&cout, 0);
+  Function call may change dynamic type:std::basic_istream<char>::operator>> (&cin, &n);
+  Function call may change dynamic type:_26 = std::basic_ostream<char>::flush (_25);
+  Function call may change dynamic type:_25 = std::basic_ostream<char>::put (_15, _34);
+  Function call may change dynamic type:_15 = std::basic_ostream<char>::operator<< (&cout, b_13);
+  Function call may change dynamic type:_41 = OBJ_TYPE_REF(_36;(const struct ctype)_27->6) (_27, 10);
+  Function call may change dynamic type:std::ctype<char>::_M_widen_init (_27);
+  No dynamic type change found.
+  Targets of polymorphic call of type 1:struct ctype token 6
+    Outer type (dynamic):struct ctype (or a derived type) offset 0
+    This is partial list; extra targets may be defined in other units. (derived types included)
+       virtual std::ctype<char>::char_type std::ctype<char>::do_widen(char) const/561
+
+int main ()
+{
+  char_type D.49557;
+  char_type D.49554;
+  char_type D.49551;
+  char_type D.49548;
+  int n;
+  int i;
+  int b;
+  int a;
+  int n.0_1;
+  struct basic_ostream & _9;
+  struct basic_ostream & _11;
+  struct basic_ostream & _15;
+  int (*) () * _20;
+  long int _21;
+  sizetype _22;
+  struct basic_ios * _23;
+  struct basic_ostream & _25;
+  struct basic_ostream & _26;
+  const struct __ctype_type * _27;
+  char _30;
+  char _32;
+  char _34;
+  int (*) () * _35;
+  int (*) () _36;
+  char _37;
+  void * PROF_39;
+  char _41;
+
+  <bb 2> [local count: 118111600]:
+  std::basic_istream<char>::operator>> (&cin, &n);
+  _9 = std::basic_ostream<char>::operator<< (&cout, 0);
+  std::endl.isra (_9);
+  _11 = std::basic_ostream<char>::operator<< (&cout, 1);
+  std::endl.isra (_11);
+  goto <bb 11>; [100.00%]
+
+  <bb 3> [local count: 952547452]:
+  b_13 = a_2 + b_3;
+  _15 = std::basic_ostream<char>::operator<< (&cout, b_13);
+  _20 = _15->_vptr.basic_ostream;
+  _21 = MEM[(long int *)_20 + -24B];
+  _22 = (sizetype) _21;
+  _23 = _15 + _22;
+  _27 = MEM[(const struct __ctype_type * *)_23 + 240B];
+  if (_27 == 0B)
+    goto <bb 4>; [0.04%]
+  else
+    goto <bb 5>; [99.96%]
+
+  <bb 4> [local count: 381018]:
+  std::__throw_bad_cast ();
+
+  <bb 5> [local count: 952166433]:
+  _30 = MEM[(const struct ctype *)_27]._M_widen_ok;
+  if (_30 != 0)
+    goto <bb 6>; [51.12%]
+  else
+    goto <bb 7>; [48.88%]
+
+  <bb 6> [local count: 486747484]:
+  _32 = MEM[(const struct ctype *)_27]._M_widen[10];
+  goto <bb 10>; [100.00%]
+
+  <bb 7> [local count: 465418949]:
+  std::ctype<char>::_M_widen_init (_27);
+  _35 = MEM[(const struct ctype *)_27].D.37636._vptr.facet;
+  _36 = MEM[(int (*) () *)_35 + 48B];
+  PROF_39 = [obj_type_ref] OBJ_TYPE_REF(_36;(const struct ctype)_27->6);
+  if (PROF_39 == do_widen)
+    goto <bb 9>; [80.00%]
+  else
+    goto <bb 8>; [20.00%]
+
+  <bb 8> [local count: 93083792]:
+  _41 = OBJ_TYPE_REF(_36;(const struct ctype)_27->6) (_27, 10);
+
+  <bb 9> [local count: 465418949]:
+  # _37 = PHI <_41(8), 10(7)>
+
+  <bb 10> [local count: 952166435]:
+  # _34 = PHI <_32(6), _37(9)>
+  _25 = std::basic_ostream<char>::put (_15, _34);
+  _26 = std::basic_ostream<char>::flush (_25);
+  i_16 = i_4 + 1;
+
+  <bb 11> [local count: 1070278034]:
+  # a_2 = PHI <0(2), b_3(10)>
+  # b_3 = PHI <1(2), b_13(10)>
+  # i_4 = PHI <1(2), i_16(10)>
+  n.0_1 = n;
+  if (n.0_1 > i_4)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 12>; [11.00%]
+
+  <bb 12> [local count: 117730583]:
+  n ={v} {CLOBBER};
+  return 0;
+
+}
+
+
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2295, decl_uid=49420, cgraph_uid=1029, symbol_order=1204) (executed once)
+
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+void _GLOBAL__sub_I_main ()
+{
+  <bb 2> [local count: 1073741824]:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  return;
+
+}
+
+

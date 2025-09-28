@@ -1,0 +1,20 @@
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/cc0TgoY2.o: in function `.L0 ':
+Fibonacci.cpp:(.text+0x2e): undefined reference to `std::cin'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x36): undefined reference to `std::istream::operator>>(int&)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x40): undefined reference to `std::cout'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x48): undefined reference to `std::ostream::operator<<(int)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x4e): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x58): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x62): undefined reference to `std::cout'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x6a): undefined reference to `std::ostream::operator<<(int)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x70): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x7a): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/cc0TgoY2.o: in function `.L3':
+Fibonacci.cpp:(.text+0x9e): undefined reference to `std::cout'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0xa6): undefined reference to `std::ostream::operator<<(int)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0xac): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/cc0TgoY2.o: in function `.L0 ':
+Fibonacci.cpp:(.text+0xb6): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x13c): undefined reference to `std::ios_base::Init::Init()'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x150): undefined reference to `std::ios_base::Init::~Init()'
+collect2: error: ld returned 1 exit status

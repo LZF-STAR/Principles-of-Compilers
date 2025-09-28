@@ -1,0 +1,77 @@
+
+;; Function main (main, funcdef_no=1727, decl_uid=43719, cgraph_uid=461, symbol_order=491)
+
+int main ()
+{
+  int n;
+  int t;
+  int i;
+  int b;
+  int a;
+  int D.48627;
+
+  try
+    {
+      a = 0;
+      b = 1;
+      i = 1;
+      std::basic_istream<char>::operator>> (&cin, &n);
+      _1 = std::basic_ostream<char>::operator<< (&cout, a);
+      std::basic_ostream<char>::operator<< (_1, endl);
+      _2 = std::basic_ostream<char>::operator<< (&cout, b);
+      std::basic_ostream<char>::operator<< (_2, endl);
+      goto <D.43781>;
+      <D.43782>:
+      t = b;
+      b = a + b;
+      _3 = std::basic_ostream<char>::operator<< (&cout, b);
+      std::basic_ostream<char>::operator<< (_3, endl);
+      a = t;
+      i = i + 1;
+      <D.43781>:
+      n.0_4 = n;
+      if (i < n.0_4) goto <D.43782>; else goto <D.43780>;
+      <D.43780>:
+    }
+  finally
+    {
+      n = {CLOBBER};
+    }
+  D.48627 = 0;
+  goto <D.48628>;
+  <D.48628>:
+  return D.48627;
+}
+
+
+
+;; Function __static_initialization_and_destruction_0 (_Z41__static_initialization_and_destruction_0ii, funcdef_no=2227, decl_uid=48619, cgraph_uid=961, symbol_order=1018)
+
+void __static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.48634>; else goto <D.48635>;
+  <D.48634>:
+  if (__priority == 65535) goto <D.48636>; else goto <D.48637>;
+  <D.48636>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxxabiv1::__cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.48638>;
+  <D.48637>:
+  <D.48638>:
+  goto <D.48639>;
+  <D.48635>:
+  <D.48639>:
+  return;
+}
+
+
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2228, decl_uid=48625, cgraph_uid=962, symbol_order=1137)
+
+void _GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+  return;
+}
+
+

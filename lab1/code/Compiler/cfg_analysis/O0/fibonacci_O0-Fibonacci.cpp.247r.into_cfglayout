@@ -1,0 +1,452 @@
+
+;; Function main (main, funcdef_no=1727, decl_uid=43719, cgraph_uid=461, symbol_order=491)
+
+
+
+try_optimize_cfg iteration 1
+
+Removing jump 32.
+
+
+try_optimize_cfg iteration 2
+
+
+
+try_optimize_cfg iteration 1
+
+(note 5 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 5 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 4 2 (set (reg/f:DI 78)
+        (symbol_ref:DI ("__stack_chk_guard") [flags 0x40]  <var_decl 0x7db1bbb13d80 __stack_chk_guard>)) "Fibonacci.cpp":4:12 135 {*movdi_64bit}
+     (nil))
+(insn 4 3 7 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 65 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [5 D.48643+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f/c:DI (reg/f:DI 78) [5 __stack_chk_guard+0 S8 A64])
+                    ] UNSPEC_FLE_QUIET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+        ]) "Fibonacci.cpp":4:12 268 {stack_protect_set_di}
+     (nil))
+(insn 7 4 8 2 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -24 [0xffffffffffffffe8])) [6 a+0 S4 A64])
+        (const_int 0 [0])) "Fibonacci.cpp":7:7 136 {*movsi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 79)
+        (const_int 1 [0x1])) "Fibonacci.cpp":8:7 135 {*movdi_64bit}
+     (nil))
+(insn 9 8 10 2 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -20 [0xffffffffffffffec])) [6 b+0 S4 A32])
+        (subreg:SI (reg:DI 79) 0)) "Fibonacci.cpp":8:7 136 {*movsi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 80)
+        (const_int 1 [0x1])) "Fibonacci.cpp":9:7 135 {*movdi_64bit}
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -16 [0xfffffffffffffff0])) [6 i+0 S4 A128])
+        (subreg:SI (reg:DI 80) 0)) "Fibonacci.cpp":9:7 136 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 81)
+        (plus:DI (reg/f:DI 65 frame)
+            (const_int -28 [0xffffffffffffffe4]))) "Fibonacci.cpp":10:12 4 {adddi3}
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 11 a1)
+        (reg:DI 81)) "Fibonacci.cpp":10:12 135 {*movdi_64bit}
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt3cin") [flags 0x40]  <var_decl 0x7db1bbf71b40 cin>)) "Fibonacci.cpp":10:12 135 {*movdi_64bit}
+     (nil))
+(call_insn 15 14 16 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x7db1bbec1600 operator>>>) [0 operator>> S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":10:12 254 {call_value_internal}
+     (nil)
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (nil))))
+(insn 16 15 17 2 (set (reg:DI 82)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -24 [0xffffffffffffffe8])) [6 a+0 S4 A64]))) "Fibonacci.cpp":11:13 90 {extendsidi2}
+     (nil))
+(insn 17 16 18 2 (set (reg:DI 11 a1)
+        (reg:DI 82)) "Fibonacci.cpp":11:13 135 {*movdi_64bit}
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7db1bbf71cf0 cout>)) "Fibonacci.cpp":11:13 135 {*movdi_64bit}
+     (nil))
+(call_insn 19 18 20 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7db1bbe2f600 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":11:13 254 {call_value_internal}
+     (nil)
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(insn 20 19 21 2 (set (reg/f:DI 72 [ _1 ])
+        (reg:DI 10 a0)) "Fibonacci.cpp":11:13 135 {*movdi_64bit}
+     (nil))
+(insn 21 20 22 2 (set (reg:DI 11 a1)
+        (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_") [flags 0x41]  <function_decl 0x7db1bbe41700 endl>)) "Fibonacci.cpp":11:18 135 {*movdi_64bit}
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 10 a0)
+        (reg/f:DI 72 [ _1 ])) "Fibonacci.cpp":11:18 135 {*movdi_64bit}
+     (nil))
+(call_insn 23 22 24 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEPFRSoS_E") [flags 0x41]  <function_decl 0x7db1bbdfd900 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":11:18 254 {call_value_internal}
+     (nil)
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (nil))))
+(insn 24 23 25 2 (set (reg:DI 83)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -20 [0xffffffffffffffec])) [6 b+0 S4 A32]))) "Fibonacci.cpp":12:13 90 {extendsidi2}
+     (nil))
+(insn 25 24 26 2 (set (reg:DI 11 a1)
+        (reg:DI 83)) "Fibonacci.cpp":12:13 135 {*movdi_64bit}
+     (nil))
+(insn 26 25 27 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7db1bbf71cf0 cout>)) "Fibonacci.cpp":12:13 135 {*movdi_64bit}
+     (nil))
+(call_insn 27 26 28 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7db1bbe2f600 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":12:13 254 {call_value_internal}
+     (nil)
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(insn 28 27 29 2 (set (reg/f:DI 73 [ _2 ])
+        (reg:DI 10 a0)) "Fibonacci.cpp":12:13 135 {*movdi_64bit}
+     (nil))
+(insn 29 28 30 2 (set (reg:DI 11 a1)
+        (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_") [flags 0x41]  <function_decl 0x7db1bbe41700 endl>)) "Fibonacci.cpp":12:18 135 {*movdi_64bit}
+     (nil))
+(insn 30 29 31 2 (set (reg:DI 10 a0)
+        (reg/f:DI 73 [ _2 ])) "Fibonacci.cpp":12:18 135 {*movdi_64bit}
+     (nil))
+(call_insn 31 30 60 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEPFRSoS_E") [flags 0x41]  <function_decl 0x7db1bbdfd900 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":12:18 254 {call_value_internal}
+     (nil)
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (nil))))
+      ; pc falls through to BB 4
+(code_label 60 31 34 3 3 (nil) [1 uses])
+(note 34 60 35 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 3 (set (reg:DI 84)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -20 [0xffffffffffffffec])) [6 b+0 S4 A32]))) "Fibonacci.cpp":14:11 90 {extendsidi2}
+     (nil))
+(insn 36 35 37 3 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -12 [0xfffffffffffffff4])) [6 t+0 S4 A32])
+        (subreg:SI (reg:DI 84) 0)) "Fibonacci.cpp":14:11 136 {*movsi_internal}
+     (nil))
+(insn 37 36 38 3 (set (reg:DI 87)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -20 [0xffffffffffffffec])) [6 b+0 S4 A32]))) "Fibonacci.cpp":15:11 90 {extendsidi2}
+     (nil))
+(insn 38 37 39 3 (set (reg:SI 86)
+        (subreg:SI (reg:DI 87) 0)) "Fibonacci.cpp":15:11 136 {*movsi_internal}
+     (nil))
+(insn 39 38 40 3 (set (reg:DI 89)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -24 [0xffffffffffffffe8])) [6 a+0 S4 A64]))) "Fibonacci.cpp":15:11 90 {extendsidi2}
+     (nil))
+(insn 40 39 41 3 (set (reg:SI 88)
+        (subreg:SI (reg:DI 89) 0)) "Fibonacci.cpp":15:11 136 {*movsi_internal}
+     (nil))
+(insn 41 40 42 3 (set (reg:SI 85)
+        (plus:SI (reg:SI 86)
+            (reg:SI 88))) "Fibonacci.cpp":15:11 3 {addsi3}
+     (nil))
+(insn 42 41 43 3 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -20 [0xffffffffffffffec])) [6 b+0 S4 A32])
+        (reg:SI 85)) "Fibonacci.cpp":15:11 136 {*movsi_internal}
+     (nil))
+(insn 43 42 44 3 (set (reg:DI 90)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -20 [0xffffffffffffffec])) [6 b+0 S4 A32]))) "Fibonacci.cpp":16:17 90 {extendsidi2}
+     (nil))
+(insn 44 43 45 3 (set (reg:DI 11 a1)
+        (reg:DI 90)) "Fibonacci.cpp":16:17 135 {*movdi_64bit}
+     (nil))
+(insn 45 44 46 3 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0x40]  <var_decl 0x7db1bbf71cf0 cout>)) "Fibonacci.cpp":16:17 135 {*movdi_64bit}
+     (nil))
+(call_insn 46 45 47 3 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x7db1bbe2f600 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":16:17 254 {call_value_internal}
+     (nil)
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(insn 47 46 48 3 (set (reg/f:DI 74 [ _3 ])
+        (reg:DI 10 a0)) "Fibonacci.cpp":16:17 135 {*movdi_64bit}
+     (nil))
+(insn 48 47 49 3 (set (reg:DI 11 a1)
+        (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_") [flags 0x41]  <function_decl 0x7db1bbe41700 endl>)) "Fibonacci.cpp":16:22 135 {*movdi_64bit}
+     (nil))
+(insn 49 48 50 3 (set (reg:DI 10 a0)
+        (reg/f:DI 74 [ _3 ])) "Fibonacci.cpp":16:22 135 {*movdi_64bit}
+     (nil))
+(call_insn 50 49 51 3 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEPFRSoS_E") [flags 0x41]  <function_decl 0x7db1bbdfd900 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":16:22 254 {call_value_internal}
+     (nil)
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (nil))))
+(insn 51 50 52 3 (set (reg:DI 91)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [6 t+0 S4 A32]))) "Fibonacci.cpp":17:11 90 {extendsidi2}
+     (nil))
+(insn 52 51 53 3 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -24 [0xffffffffffffffe8])) [6 a+0 S4 A64])
+        (subreg:SI (reg:DI 91) 0)) "Fibonacci.cpp":17:11 136 {*movsi_internal}
+     (nil))
+(insn 53 52 54 3 (set (reg:DI 94)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -16 [0xfffffffffffffff0])) [6 i+0 S4 A128]))) "Fibonacci.cpp":18:11 90 {extendsidi2}
+     (nil))
+(insn 54 53 55 3 (set (reg:SI 93)
+        (subreg:SI (reg:DI 94) 0)) "Fibonacci.cpp":18:11 136 {*movsi_internal}
+     (nil))
+(insn 55 54 56 3 (set (reg:SI 92)
+        (plus:SI (reg:SI 93)
+            (const_int 1 [0x1]))) "Fibonacci.cpp":18:11 3 {addsi3}
+     (nil))
+(insn 56 55 57 3 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -16 [0xfffffffffffffff0])) [6 i+0 S4 A128])
+        (reg:SI 92)) "Fibonacci.cpp":18:11 136 {*movsi_internal}
+     (nil))
+(code_label 57 56 58 4 2 (nil) [0 uses])
+(note 58 57 59 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 61 4 (set (reg:DI 75 [ n.0_4 ])
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -28 [0xffffffffffffffe4])) [6 n+0 S4 A32]))) "Fibonacci.cpp":13:14 90 {extendsidi2}
+     (nil))
+(insn 61 59 62 4 (set (reg:DI 96)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -16 [0xfffffffffffffff0])) [6 i+0 S4 A128]))) "Fibonacci.cpp":13:14 90 {extendsidi2}
+     (nil))
+(insn 62 61 63 4 (set (reg:SI 95)
+        (subreg:SI (reg:DI 96) 0)) "Fibonacci.cpp":13:14 136 {*movsi_internal}
+     (nil))
+(insn 63 62 64 4 (set (reg:DI 97)
+        (sign_extend:DI (reg:SI 95))) "Fibonacci.cpp":13:14 90 {extendsidi2}
+     (nil))
+(insn 64 63 65 4 (set (reg:DI 98)
+        (reg:DI 75 [ n.0_4 ])) "Fibonacci.cpp":13:14 135 {*movdi_64bit}
+     (nil))
+(jump_insn 65 64 66 4 (set (pc)
+        (if_then_else (lt (reg:DI 97)
+                (reg:DI 98))
+            (label_ref 60)
+            (pc))) "Fibonacci.cpp":13:14 182 {*branchdi}
+     (nil)
+ -> 60)
+(note 66 65 67 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 70 5 (set (reg:DI 76 [ _22 ])
+        (const_int 0 [0])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 70 67 74 5 (set (reg:DI 77 [ <retval> ])
+        (reg:DI 76 [ _22 ])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 74 70 75 5 (set (reg/f:DI 100)
+        (symbol_ref:DI ("__stack_chk_guard") [flags 0x40]  <var_decl 0x7db1bbb13d80 __stack_chk_guard>)) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 75 74 76 5 (parallel [
+            (set (reg:DI 101)
+                (unspec:DI [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 65 frame)
+                                (const_int -8 [0xfffffffffffffff8])) [5 D.48643+0 S8 A64])
+                        (mem/v/f/c:DI (reg/f:DI 100) [5 __stack_chk_guard+0 S8 A64])
+                    ] UNSPEC_COPYSIGN))
+            (clobber (scratch:DI))
+        ]) "Fibonacci.cpp":20:1 270 {stack_protect_test_di}
+     (nil))
+(jump_insn 76 75 83 5 (set (pc)
+        (if_then_else (eq (reg:DI 101)
+                (const_int 0 [0]))
+            (label_ref 79)
+            (pc))) "Fibonacci.cpp":20:1 182 {*branchdi}
+     (nil)
+ -> 79)
+(note 83 76 77 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(call_insn 77 83 79 6 (parallel [
+            (call (mem:SI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7db1bbb59700 __stack_chk_fail>) [0 __stack_chk_fail S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":20:1 253 {call_internal}
+     (expr_list:REG_NORETURN (const_int 0 [0])
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (nil))
+(code_label 79 77 84 7 5 (nil) [1 uses])
+(note 84 79 80 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 80 84 81 7 (set (reg/i:DI 10 a0)
+        (reg:DI 77 [ <retval> ])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 81 80 0 7 (use (reg/i:DI 10 a0)) "Fibonacci.cpp":20:1 -1
+     (nil))
+
+;; Function __static_initialization_and_destruction_0 (_Z41__static_initialization_and_destruction_0ii, funcdef_no=2227, decl_uid=48619, cgraph_uid=961, symbol_order=1018)
+
+
+
+try_optimize_cfg iteration 1
+
+(note 9 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 9 5 2 (set (reg:DI 72)
+        (reg:DI 10 a0 [ __initialize_p ])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 5 2 3 2 (set (reg:DI 74)
+        (reg:DI 11 a1 [ __priority ])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 3 5 4 2 (set (reg:SI 73)
+        (subreg:SI (reg:DI 72) 0)) "Fibonacci.cpp":20:1 136 {*movsi_internal}
+     (nil))
+(insn 4 3 6 2 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -4 [0xfffffffffffffffc])) [6 __initialize_p+0 S4 A32])
+        (reg:SI 73)) "Fibonacci.cpp":20:1 136 {*movsi_internal}
+     (nil))
+(insn 6 4 7 2 (set (reg:SI 75)
+        (subreg:SI (reg:DI 74) 0)) "Fibonacci.cpp":20:1 136 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (set (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                (const_int -8 [0xfffffffffffffff8])) [6 __priority+0 S4 A32])
+        (reg:SI 75)) "Fibonacci.cpp":20:1 136 {*movsi_internal}
+     (nil))
+(note 8 7 11 2 NOTE_INSN_FUNCTION_BEG)
+(insn 11 8 12 2 (set (reg:DI 77)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [6 __initialize_p+0 S4 A32]))) "Fibonacci.cpp":20:1 90 {extendsidi2}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 76)
+        (subreg:SI (reg:DI 77) 0)) "Fibonacci.cpp":20:1 136 {*movsi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 78)
+        (sign_extend:DI (reg:SI 76))) "Fibonacci.cpp":20:1 90 {extendsidi2}
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 79)
+        (const_int 1 [0x1])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(jump_insn 15 14 16 2 (set (pc)
+        (if_then_else (ne (reg:DI 78)
+                (reg:DI 79))
+            (label_ref:DI 32)
+            (pc))) "Fibonacci.cpp":20:1 182 {*branchdi}
+     (nil)
+ -> 32)
+(note 16 15 17 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 3 (set (reg:DI 81)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [6 __priority+0 S4 A32]))) "Fibonacci.cpp":20:1 90 {extendsidi2}
+     (nil))
+(insn 18 17 19 3 (set (reg:SI 80)
+        (subreg:SI (reg:DI 81) 0)) "Fibonacci.cpp":20:1 136 {*movsi_internal}
+     (nil))
+(insn 19 18 20 3 (set (reg:DI 82)
+        (sign_extend:DI (reg:SI 80))) "Fibonacci.cpp":20:1 90 {extendsidi2}
+     (nil))
+(insn 20 19 21 3 (set (reg:DI 84)
+        (const_int 65536 [0x10000])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 21 20 22 3 (set (reg:DI 83)
+        (plus:DI (reg:DI 84)
+            (const_int -1 [0xffffffffffffffff]))) "Fibonacci.cpp":20:1 4 {adddi3}
+     (expr_list:REG_EQUAL (const_int 65535 [0xffff])
+        (nil)))
+(jump_insn 22 21 23 3 (set (pc)
+        (if_then_else (ne (reg:DI 82)
+                (reg:DI 83))
+            (label_ref:DI 32)
+            (pc))) "Fibonacci.cpp":20:1 182 {*branchdi}
+     (nil)
+ -> 32)
+(note 23 22 24 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 4 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7db1bbfb4510 __ioinit>)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (nil))
+(call_insn 25 24 26 4 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x7db1bc2bca00 __ct_comp >) [0 __ct_comp  S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 253 {call_internal}
+     (nil)
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 26 25 27 4 (set (reg:DI 12 a2)
+        (symbol_ref:DI ("__dso_handle") [flags 0x42]  <var_decl 0x7db1bbb13240 __dso_handle>)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (nil))
+(insn 27 26 28 4 (set (reg:DI 11 a1)
+        (symbol_ref:DI ("_ZStL8__ioinit") [flags 0x2]  <var_decl 0x7db1bbfb4510 __ioinit>)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (nil))
+(insn 28 27 29 4 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x7db1bc2bcc00 __dt_comp >)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (nil))
+(call_insn 29 28 32 4 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x7db1bbb32100 __cxa_atexit>) [0 __cxa_atexit S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 254 {call_value_internal}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (expr_list:DI (use (reg:DI 12 a2))
+                (nil)))))
+(code_label 32 29 33 5 6 (nil) [2 uses])
+(note 33 32 0 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2228, decl_uid=48625, cgraph_uid=962, symbol_order=1137)
+
+
+
+try_optimize_cfg iteration 1
+
+(note 3 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg:DI 72)
+        (const_int 65536 [0x10000])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 11 a1)
+        (plus:DI (reg:DI 72)
+            (const_int -1 [0xffffffffffffffff]))) "Fibonacci.cpp":20:1 4 {adddi3}
+     (expr_list:REG_EQUAL (const_int 65535 [0xffff])
+        (nil)))
+(insn 7 6 8 2 (set (reg:DI 10 a0)
+        (const_int 1 [0x1])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(call_insn 8 7 0 2 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_Z41__static_initialization_and_destruction_0ii") [flags 0x3]  <function_decl 0x7db1bbb32000 __static_initialization_and_destruction_0>) [0 __static_initialization_and_destruction_0 S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":20:1 253 {call_internal}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))

@@ -1,0 +1,753 @@
+
+;; Function std::ctype<char>::do_widen (_ZNKSt5ctypeIcE8do_widenEc, funcdef_no=1561, decl_uid=37570, cgraph_uid=532, symbol_order=561)
+
+
+;; Generating RTL for gimple basic block 2
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 8.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/f:DI 73 [ this ])
+        (reg:DI 10 a0 [ this ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":1087:7 -1
+     (nil))
+(insn 3 2 4 2 (set (reg/v:DI 74 [ __c ])
+        (reg:DI 11 a1 [ __c ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":1087:7 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 11 2 (set (reg:DI 72 [ <retval> ])
+        (reg/v:DI 74 [ __c ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":1088:16 -1
+     (nil))
+(insn 11 7 12 2 (set (reg/i:DI 10 a0)
+        (reg:DI 72 [ <retval> ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":1088:21 -1
+     (nil))
+(insn 12 11 0 2 (use (reg/i:DI 10 a0)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":1088:21 -1
+     (nil))
+
+;; Function std::endl.isra (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0, funcdef_no=2298, decl_uid=49501, cgraph_uid=1045, symbol_order=1223)
+
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+Edge 6->8 redirected to 11
+deleting block 10
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (reg/v/f:DI 83 [ __os ])
+        (reg:DI 10 a0 [ __os ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":684:5 -1
+     (nil))
+(note 3 2 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 3 8 2 (set (reg/f:DI 84)
+        (mem/f:DI (reg/v/f:DI 83 [ __os ]) [2 __os_1(D)->_vptr.basic_ostream+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:DI 85)
+        (mem:DI (plus:DI (reg/f:DI 84)
+                (const_int -24 [0xffffffffffffffe8])) [9 MEM[(long int *)_2 + -24B]+0 S8 A64])) -1
+     (nil))
+(insn 9 8 10 2 (set (reg/f:DI 86)
+        (plus:DI (reg/v/f:DI 83 [ __os ])
+            (reg:DI 85))) -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:DI 77 [ _13 ])
+        (mem/f:DI (plus:DI (reg/f:DI 86)
+                (const_int 240 [0xf0])) [6 MEM[(const struct __ctype_type * *)_5 + 240B]+0 S8 A64])) -1
+     (nil))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (ne (reg/f:DI 77 [ _13 ])
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "/usr/riscv64-linux-gnu/include/c++/11/bits/basic_ios.h":49:7 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 15)
+(note 12 11 13 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(call_insn 13 12 14 4 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x775ee999e800 __throw_bad_cast>) [0 __throw_bad_cast S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/basic_ios.h":50:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x775ee999e800 __throw_bad_cast>)
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (nil)))
+    (nil))
+(barrier 14 13 15)
+(code_label 15 14 16 5 4 (nil) [1 uses])
+(note 16 15 17 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 18 5 (set (reg:DI 88)
+        (zero_extend:DI (mem:QI (plus:DI (reg/f:DI 77 [ _13 ])
+                    (const_int 56 [0x38])) [0 MEM[(const struct ctype *)_13]._M_widen_ok+0 S1 A64]))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 -1
+     (nil))
+(insn 18 17 19 5 (set (reg:QI 87)
+        (subreg:QI (reg:DI 88) 0)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 -1
+     (nil))
+(insn 19 18 20 5 (set (reg:DI 89)
+        (zero_extend:DI (reg:QI 87))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 -1
+     (nil))
+(jump_insn 20 19 21 5 (set (pc)
+        (if_then_else (eq (reg:DI 89)
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 25)
+(note 21 20 22 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 6 (set (reg:DI 79 [ _18 ])
+        (zero_extend:DI (mem:QI (plus:DI (reg/f:DI 77 [ _13 ])
+                    (const_int 67 [0x43])) [0 MEM[(const struct ctype *)_13]._M_widen[10]+0 S1 A8]))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":878:51 -1
+     (nil))
+(jump_insn 23 22 24 6 (set (pc)
+        (label_ref 39)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":878:51 -1
+     (nil)
+ -> 39)
+(barrier 24 23 25)
+(code_label 25 24 26 7 5 (nil) [1 uses])
+(note 26 25 27 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 7 (set (reg:DI 10 a0)
+        (reg/f:DI 77 [ _13 ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":879:21 -1
+     (nil))
+(call_insn 28 27 29 7 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x775ee883a200 _M_widen_init>) [0 _M_widen_init S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":879:21 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x775ee883a200 _M_widen_init>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 29 28 30 7 (set (reg/f:DI 90)
+        (mem/f:DI (reg/f:DI 77 [ _13 ]) [2 MEM[(const struct ctype *)_13].D.37636._vptr.facet+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(insn 30 29 31 7 (set (reg/f:DI 81 [ _22 ])
+        (mem/f:DI (plus:DI (reg/f:DI 90)
+                (const_int 48 [0x30])) [4 MEM[(int (*) () *)_21 + 48B]+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(insn 31 30 32 7 (set (reg/f:DI 91)
+        (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x775ee8831d00 do_widen>)) -1
+     (nil))
+(jump_insn 32 31 33 7 (set (pc)
+        (if_then_else (eq (reg/f:DI 81 [ _22 ])
+                (reg/f:DI 91))
+            (label_ref:DI 53)
+            (pc))) 182 {*branchdi}
+     (int_list:REG_BR_PROB 858993460 (nil))
+ -> 53)
+(note 33 32 34 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 8 (set (reg:DI 11 a1)
+        (const_int 10 [0xa])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(insn 35 34 36 8 (set (reg:DI 10 a0)
+        (reg/f:DI 77 [ _13 ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(call_insn 36 35 37 8 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (reg/f:DI 81 [ _22 ]) [0 *OBJ_TYPE_REF(_22;_13->6) S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:QI (use (reg:DI 11 a1))
+            (nil))))
+(insn 37 36 38 8 (set (reg:DI 92)
+        (reg:DI 10 a0)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(insn 38 37 50 8 (set (reg:DI 79 [ _18 ])
+        (reg:DI 92)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(jump_insn 50 38 51 8 (set (pc)
+        (label_ref 39)) -1
+     (nil)
+ -> 39)
+(barrier 51 50 53)
+(code_label 53 51 52 9 7 (nil) [1 uses])
+(note 52 53 4 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 4 52 39 9 (set (reg:DI 79 [ _18 ])
+        (const_int 10 [0xa])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(code_label 39 4 40 10 6 (nil) [2 uses])
+(note 40 39 41 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 10 (set (reg:DI 11 a1)
+        (reg:DI 79 [ _18 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (nil))
+(insn 42 41 43 10 (set (reg:DI 10 a0)
+        (reg/v/f:DI 83 [ __os ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (nil))
+(call_insn 43 42 44 10 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x775ee86a8a00 put>) [0 put S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x775ee86a8a00 put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:QI (use (reg:DI 11 a1))
+            (nil))))
+(insn 44 43 45 10 (set (reg/f:DI 76 [ _7 ])
+        (reg:DI 10 a0)) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (nil))
+(insn 45 44 46 10 (set (reg:DI 10 a0)
+        (reg/f:DI 76 [ _7 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":707:24 -1
+     (nil))
+(call_insn/j 46 45 47 10 (set (reg:DI 10 a0)
+        (call (mem:SI (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x775ee86a8d00 flush>) [0 flush S4 A32])
+            (const_int 0 [0]))) "/usr/riscv64-linux-gnu/include/c++/11/ostream":707:24 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x775ee86a8d00 flush>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(barrier 47 46 0)
+
+;; Function main (main, funcdef_no=1808, decl_uid=44612, cgraph_uid=542, symbol_order=572) (executed once)
+
+Partition 0: size 4 align 4
+	n
+
+;; Generating RTL for gimple basic block 2
+
+;; Generating RTL for gimple basic block 3
+
+;; Generating RTL for gimple basic block 4
+
+;; Generating RTL for gimple basic block 5
+
+;; Generating RTL for gimple basic block 6
+
+;; Generating RTL for gimple basic block 7
+
+;; Generating RTL for gimple basic block 8
+
+;; Generating RTL for gimple basic block 9
+
+;; Generating RTL for gimple basic block 10
+Edge 7->9 redirected to 14
+Predictions for insn 99 bb 12
+  first match heuristics: 99.96%  exec 117730583 (estimated locally) hit 235461165 (estimated locally) (200.0%)
+  combined heuristics: 99.96%  exec 117730583 (estimated locally) hit 235461165 (estimated locally) (200.0%)
+  noreturn call heuristics: 99.96%  exec 117730583 (estimated locally) hit 235461165 (estimated locally) (200.0%)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Removing jump 94.
+Merging block 14 into block 13...
+Merged blocks 13 and 14.
+Merged 13 and 14 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 9 3 2 NOTE_INSN_FUNCTION_BEG)
+(insn 3 2 4 2 (set (reg/f:DI 93)
+        (symbol_ref:DI ("__stack_chk_guard") [flags 0xc0]  <var_decl 0x775ee803f1b0 __stack_chk_guard>)) "Fibonacci.cpp":4:12 -1
+     (nil))
+(insn 4 3 11 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 67 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [14 D.49567+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f/c:DI (reg/f:DI 93) [14 __stack_chk_guard+0 S8 A64])
+                    ] UNSPEC_FLE_QUIET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+        ]) "Fibonacci.cpp":4:12 -1
+     (nil))
+(insn 11 4 12 2 (set (reg:DI 94)
+        (plus:DI (reg/f:DI 67 virtual-stack-vars)
+            (const_int -12 [0xfffffffffffffff4]))) "Fibonacci.cpp":10:12 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 11 a1)
+        (reg:DI 94)) "Fibonacci.cpp":10:12 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt3cin") [flags 0xc0]  <var_decl 0x775ee842b090 cin>)) "Fibonacci.cpp":10:12 -1
+     (nil))
+(call_insn 14 13 15 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x775ee8337000 operator>>>) [0 operator>> S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":10:12 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x775ee8337000 operator>>>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (nil))))
+(insn 15 14 16 2 (set (reg:DI 11 a1)
+        (const_int 0 [0])) "Fibonacci.cpp":11:13 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0xc0]  <var_decl 0x775ee842b120 cout>)) "Fibonacci.cpp":11:13 -1
+     (nil))
+(call_insn 17 16 18 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":11:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(insn 18 17 19 2 (set (reg/f:DI 75 [ _9 ])
+        (reg:DI 10 a0)) "Fibonacci.cpp":11:13 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 10 a0)
+        (reg/f:DI 75 [ _9 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":113:13 -1
+     (nil))
+(call_insn 20 19 21 2 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x775ee7fee100 endl.isra>) [0 endl.isra S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":113:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x775ee7fee100 endl.isra>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 21 20 22 2 (set (reg:DI 11 a1)
+        (const_int 1 [0x1])) "Fibonacci.cpp":12:13 -1
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0xc0]  <var_decl 0x775ee842b120 cout>)) "Fibonacci.cpp":12:13 -1
+     (nil))
+(call_insn 23 22 24 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":12:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(insn 24 23 25 2 (set (reg/f:DI 76 [ _11 ])
+        (reg:DI 10 a0)) "Fibonacci.cpp":12:13 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:DI 10 a0)
+        (reg/f:DI 76 [ _11 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":113:13 -1
+     (nil))
+(call_insn 26 25 29 2 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x775ee7fee100 endl.isra>) [0 endl.isra S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":113:13 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x775ee7fee100 endl.isra>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 29 26 30 2 (set (reg:DI 96)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 67 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [5 n+0 S4 A32]))) "Fibonacci.cpp":13:14 -1
+     (nil))
+(insn 30 29 31 2 (set (reg:SI 95)
+        (subreg:SI (reg:DI 96) 0)) "Fibonacci.cpp":13:14 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:DI 97)
+        (sign_extend:DI (reg:SI 95))) "Fibonacci.cpp":13:14 -1
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 98)
+        (const_int 1 [0x1])) "Fibonacci.cpp":13:14 -1
+     (nil))
+(jump_insn 33 32 106 2 (set (pc)
+        (if_then_else (le (reg:DI 97)
+                (reg:DI 98))
+            (label_ref 91)
+            (pc))) "Fibonacci.cpp":13:14 -1
+     (int_list:REG_BR_PROB 118111604 (nil))
+ -> 91)
+(note 106 33 5 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 5 106 6 4 (set (reg/v:DI 79 [ i ])
+        (const_int 1 [0x1])) "Fibonacci.cpp":9:7 -1
+     (nil))
+(insn 6 5 7 4 (set (reg/v:DI 77 [ b ])
+        (const_int 1 [0x1])) "Fibonacci.cpp":8:7 -1
+     (nil))
+(insn 7 6 85 4 (set (reg/v:DI 74 [ a ])
+        (const_int 0 [0])) "Fibonacci.cpp":7:7 -1
+     (nil))
+(code_label 85 7 34 5 15 (nil) [1 uses])
+(note 34 85 35 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 35 34 36 5 (set (reg/v:DI 73 [ b ])
+        (reg/v:DI 77 [ b ])) -1
+     (nil))
+(insn 36 35 37 5 (set (reg:SI 99)
+        (plus:SI (subreg/s/u:SI (reg/v:DI 77 [ b ]) 0)
+            (subreg/s/u:SI (reg/v:DI 74 [ a ]) 0))) "Fibonacci.cpp":15:11 -1
+     (nil))
+(insn 37 36 38 5 (set (reg/v:DI 77 [ b ])
+        (sign_extend:DI (reg:SI 99))) "Fibonacci.cpp":15:11 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:DI 11 a1)
+        (reg/v:DI 77 [ b ])) "Fibonacci.cpp":16:17 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0xc0]  <var_decl 0x775ee842b120 cout>)) "Fibonacci.cpp":16:17 -1
+     (nil))
+(call_insn 40 39 41 5 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":16:17 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(insn 41 40 42 5 (set (reg/f:DI 78 [ _15 ])
+        (reg:DI 10 a0)) "Fibonacci.cpp":16:17 -1
+     (nil))
+(insn 42 41 43 5 (set (reg/f:DI 100)
+        (mem/f:DI (reg/f:DI 78 [ _15 ]) [2 _15->_vptr.basic_ostream+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (nil))
+(insn 43 42 44 5 (set (reg:DI 101)
+        (mem:DI (plus:DI (reg/f:DI 100)
+                (const_int -24 [0xffffffffffffffe8])) [9 MEM[(long int *)_20 + -24B]+0 S8 A64])) -1
+     (nil))
+(insn 44 43 45 5 (set (reg/f:DI 102)
+        (plus:DI (reg/f:DI 78 [ _15 ])
+            (reg:DI 101))) -1
+     (nil))
+(insn 45 44 46 5 (set (reg/f:DI 85 [ _27 ])
+        (mem/f:DI (plus:DI (reg/f:DI 102)
+                (const_int 240 [0xf0])) [6 MEM[(const struct __ctype_type * *)_23 + 240B]+0 S8 A64])) -1
+     (nil))
+(jump_insn 46 45 47 5 (set (pc)
+        (if_then_else (ne (reg/f:DI 85 [ _27 ])
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "/usr/riscv64-linux-gnu/include/c++/11/bits/basic_ios.h":49:7 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 50)
+(note 47 46 48 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(call_insn 48 47 49 6 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x775ee999e800 __throw_bad_cast>) [0 __throw_bad_cast S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/basic_ios.h":50:18 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x775ee999e800 __throw_bad_cast>)
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (nil)))
+    (nil))
+(barrier 49 48 50)
+(code_label 50 49 51 7 12 (nil) [1 uses])
+(note 51 50 52 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 7 (set (reg:DI 104)
+        (zero_extend:DI (mem:QI (plus:DI (reg/f:DI 85 [ _27 ])
+                    (const_int 56 [0x38])) [0 MEM[(const struct ctype *)_27]._M_widen_ok+0 S1 A64]))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 -1
+     (nil))
+(insn 53 52 54 7 (set (reg:QI 103)
+        (subreg:QI (reg:DI 104) 0)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 -1
+     (nil))
+(insn 54 53 55 7 (set (reg:DI 105)
+        (zero_extend:DI (reg:QI 103))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 -1
+     (nil))
+(jump_insn 55 54 56 7 (set (pc)
+        (if_then_else (eq (reg:DI 105)
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 -1
+     (int_list:REG_BR_PROB 524845004 (nil))
+ -> 60)
+(note 56 55 57 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 8 (set (reg:DI 87 [ _32 ])
+        (zero_extend:DI (mem:QI (plus:DI (reg/f:DI 85 [ _27 ])
+                    (const_int 67 [0x43])) [0 MEM[(const struct ctype *)_27]._M_widen[10]+0 S1 A8]))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":878:51 -1
+     (nil))
+(jump_insn 58 57 59 8 (set (pc)
+        (label_ref 74)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":878:51 -1
+     (nil)
+ -> 74)
+(barrier 59 58 60)
+(code_label 60 59 61 9 13 (nil) [1 uses])
+(note 61 60 62 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 9 (set (reg:DI 10 a0)
+        (reg/f:DI 85 [ _27 ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":879:21 -1
+     (nil))
+(call_insn 63 62 64 9 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x775ee883a200 _M_widen_init>) [0 _M_widen_init S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":879:21 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x775ee883a200 _M_widen_init>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 64 63 65 9 (set (reg/f:DI 106)
+        (mem/f:DI (reg/f:DI 85 [ _27 ]) [2 MEM[(const struct ctype *)_27].D.37636._vptr.facet+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(insn 65 64 66 9 (set (reg/f:DI 89 [ _36 ])
+        (mem/f:DI (plus:DI (reg/f:DI 106)
+                (const_int 48 [0x30])) [4 MEM[(int (*) () *)_35 + 48B]+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(insn 66 65 67 9 (set (reg/f:DI 107)
+        (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x775ee8831d00 do_widen>)) -1
+     (nil))
+(jump_insn 67 66 68 9 (set (pc)
+        (if_then_else (eq (reg/f:DI 89 [ _36 ])
+                (reg/f:DI 107))
+            (label_ref:DI 110)
+            (pc))) 182 {*branchdi}
+     (int_list:REG_BR_PROB 858993460 (nil))
+ -> 110)
+(note 68 67 69 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 10 (set (reg:DI 11 a1)
+        (const_int 10 [0xa])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(insn 70 69 71 10 (set (reg:DI 10 a0)
+        (reg/f:DI 85 [ _27 ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(call_insn 71 70 72 10 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (reg/f:DI 89 [ _36 ]) [0 *OBJ_TYPE_REF(_36;_27->6) S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (expr_list:REG_CALL_DECL (nil)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:QI (use (reg:DI 11 a1))
+            (nil))))
+(insn 72 71 73 10 (set (reg:DI 108)
+        (reg:DI 10 a0)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(insn 73 72 107 10 (set (reg:DI 87 [ _32 ])
+        (reg:DI 108)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(jump_insn 107 73 108 10 (set (pc)
+        (label_ref 74)) -1
+     (nil)
+ -> 74)
+(barrier 108 107 110)
+(code_label 110 108 109 11 17 (nil) [1 uses])
+(note 109 110 8 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 8 109 74 11 (set (reg:DI 87 [ _32 ])
+        (const_int 10 [0xa])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 -1
+     (nil))
+(code_label 74 8 75 12 14 (nil) [2 uses])
+(note 75 74 76 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 77 12 (set (reg:DI 11 a1)
+        (reg:DI 87 [ _32 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (nil))
+(insn 77 76 78 12 (set (reg:DI 10 a0)
+        (reg/f:DI 78 [ _15 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (nil))
+(call_insn 78 77 79 12 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x775ee86a8a00 put>) [0 put S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x775ee86a8a00 put>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:QI (use (reg:DI 11 a1))
+            (nil))))
+(insn 79 78 80 12 (set (reg/f:DI 84 [ _25 ])
+        (reg:DI 10 a0)) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 -1
+     (nil))
+(insn 80 79 81 12 (set (reg:DI 10 a0)
+        (reg/f:DI 84 [ _25 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":707:24 -1
+     (nil))
+(call_insn 81 80 82 12 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x775ee86a8d00 flush>) [0 flush S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":707:24 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x775ee86a8d00 flush>)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 82 81 83 12 (set (reg:SI 109)
+        (plus:SI (subreg/s/u:SI (reg/v:DI 79 [ i ]) 0)
+            (const_int 1 [0x1]))) "Fibonacci.cpp":18:11 -1
+     (nil))
+(insn 83 82 84 12 (set (reg/v:DI 79 [ i ])
+        (sign_extend:DI (reg:SI 109))) "Fibonacci.cpp":18:11 -1
+     (nil))
+(insn 84 83 86 12 (set (reg/v:DI 74 [ a ])
+        (reg/v:DI 73 [ b ])) -1
+     (nil))
+(insn 86 84 87 12 (set (reg:DI 111)
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 67 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [5 n+0 S4 A32]))) "Fibonacci.cpp":13:14 -1
+     (nil))
+(insn 87 86 88 12 (set (reg:SI 110)
+        (subreg:SI (reg:DI 111) 0)) "Fibonacci.cpp":13:14 -1
+     (nil))
+(insn 88 87 89 12 (set (reg:DI 112)
+        (sign_extend:DI (reg:SI 110))) "Fibonacci.cpp":13:14 -1
+     (nil))
+(insn 89 88 90 12 (set (reg:DI 113)
+        (reg/v:DI 79 [ i ])) "Fibonacci.cpp":13:14 -1
+     (nil))
+(jump_insn 90 89 91 12 (set (pc)
+        (if_then_else (gt (reg:DI 112)
+                (reg:DI 113))
+            (label_ref 85)
+            (pc))) "Fibonacci.cpp":13:14 -1
+     (int_list:REG_BR_PROB 955630228 (nil))
+ -> 85)
+(code_label 91 90 92 13 11 (nil) [1 uses])
+(note 92 91 93 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 93 92 97 13 (set (reg:DI 92 [ <retval> ])
+        (const_int 0 [0])) "Fibonacci.cpp":20:1 -1
+     (nil))
+(insn 97 93 98 13 (set (reg/f:DI 115)
+        (symbol_ref:DI ("__stack_chk_guard") [flags 0xc0]  <var_decl 0x775ee803f1b0 __stack_chk_guard>)) "Fibonacci.cpp":20:1 -1
+     (nil))
+(insn 98 97 99 13 (parallel [
+            (set (reg:DI 116)
+                (unspec:DI [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 67 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [14 D.49567+0 S8 A64])
+                        (mem/v/f/c:DI (reg/f:DI 115) [14 __stack_chk_guard+0 S8 A64])
+                    ] UNSPEC_COPYSIGN))
+            (clobber (scratch:DI))
+        ]) "Fibonacci.cpp":20:1 -1
+     (nil))
+(jump_insn 99 98 111 13 (set (pc)
+        (if_then_else (eq (reg:DI 116)
+                (const_int 0 [0]))
+            (label_ref 102)
+            (pc))) "Fibonacci.cpp":20:1 -1
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 102)
+(note 111 99 100 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(call_insn 100 111 101 15 (parallel [
+            (call (mem:SI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x775ee8030700 __stack_chk_fail>) [0 __stack_chk_fail S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":20:1 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x775ee8030700 __stack_chk_fail>)
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 101 100 102)
+(code_label 102 101 112 16 16 (nil) [1 uses])
+(note 112 102 103 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 103 112 104 16 (set (reg/i:DI 10 a0)
+        (reg:DI 92 [ <retval> ])) "Fibonacci.cpp":20:1 -1
+     (nil))
+(insn 104 103 0 16 (use (reg/i:DI 10 a0)) "Fibonacci.cpp":20:1 -1
+     (nil))
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2295, decl_uid=49420, cgraph_uid=1029, symbol_order=1204) (executed once)
+
+
+;; Generating RTL for gimple basic block 2
+deleting block 4
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:DI 72)
+        (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 -1
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 10 a0)
+        (reg/f:DI 72)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 -1
+     (nil))
+(call_insn 7 6 8 2 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x775ee8af8500 __ct_comp >) [0 __ct_comp  S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x775ee8af8500 __ct_comp >)
+        (nil))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 8 7 9 2 (set (reg/f:DI 73)
+        (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 12 a2)
+        (symbol_ref:DI ("__dso_handle") [flags 0xc2]  <var_decl 0x775ee7f332d0 __dso_handle>)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 11 a1)
+        (reg/f:DI 73)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x775ee8af8700 __dt_comp >)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 -1
+     (nil))
+(call_insn/j 12 11 13 2 (set (reg:DI 10 a0)
+        (call (mem:SI (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x775ee7f9b100 __cxa_atexit>) [0 __cxa_atexit S4 A32])
+            (const_int 0 [0]))) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 -1
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x775ee7f9b100 __cxa_atexit>)
+        (expr_list:REG_EH_REGION (const_int 0 [0])
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (expr_list:DI (use (reg:DI 12 a2))
+                (nil)))))
+(barrier 13 12 0)

@@ -1,0 +1,1729 @@
+
+;; Function std::ctype<char>::do_widen (_ZNKSt5ctypeIcE8do_widenEc, funcdef_no=1561, decl_uid=37570, cgraph_uid=532, symbol_order=561)
+
+Starting decreasing number of live ranges...
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+Reg 76 uninteresting
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+
+Pass 0 for finding pseudo/allocno costs
+
+    a0 (r76,l0) best GR_REGS, allocno GR_REGS
+
+  a0(r76,l0) costs: SIBCALL_REGS:4000,4000 JALR_REGS:4000,4000 GR_REGS:4000,4000 MEM:10000,10000
+
+
+Pass 1 for finding pseudo/allocno costs
+
+    r76: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+
+  a0(r76,l0) costs: GR_REGS:4000,4000 MEM:20000,20000
+
+   Insn 12(l0): point = 0
+   Insn 11(l0): point = 2
+   Insn 14(l0): point = 4
+ a0(r76): [3..4]
+Compressing live ranges: from 7 to 2 - 28%
+Ranges after the compression:
+ a0(r76): [0..1]
++++Allocating 0 bytes for conflict table (uncompressed size 8)
+;; a0(r76,l0) conflicts:
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+
+  pref0:a0(r76)<-hr11@2000
+  pref1:a0(r76)<-hr10@2000
+  regions=1, blocks=3, points=2
+    allocnos=1 (big 0), copies=0, conflicts=0, ranges=1
+
+**** Allocnos coloring:
+
+
+  Loop 0 (parent -1, header bb2, depth 0)
+    bbs: 2
+    all: 0r76
+    modified regnos: 76
+    border:
+    Pressure: ALL_REGS=2
+    Hard reg set forest:
+      0:( 1 5-63)@0
+        1:( 5-31)@40000
+      Allocno a0r76 of GR_REGS(28) has 27 avail. regs  5-31, node:  5-31 (confl regs =  0-4 32-65)
+      Forming thread from colorable bucket:
+      Pushing a0(r76,l0)(cost 0)
+      Popping a0(r76,l0)  --         assign reg 11
+Disposition:
+    0:r76  l0    11
+New iteration of spill/restore move
++++Costs: overall 0, reg 0, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+std::ctype<char>::do_widen
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [zero] 3 [gp] 4 [tp] 5 [t0] 6 [t1] 7 [t2] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 28 [t3] 29 [t4] 30 [t5] 31 [t6] 32 [ft0] 33 [ft1] 34 [ft2] 35 [ft3] 36 [ft4] 37 [ft5] 38 [ft6] 39 [ft7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 60 [ft8] 61 [ft9] 62 [ft10] 63 [ft11]
+;;  hardware regs used 	 2 [sp] 64 [arg] 65 [frame]
+;;  regular block artificial uses 	 2 [sp] 8 [s0] 64 [arg] 65 [frame]
+;;  eh block artificial uses 	 2 [sp] 8 [s0] 64 [arg] 65 [frame]
+;;  entry block defs 	 1 [ra] 2 [sp] 8 [s0] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 64 [arg] 65 [frame]
+;;  exit block uses 	 1 [ra] 2 [sp] 8 [s0] 10 [a0] 65 [frame]
+;;  regs ever live 	 10 [a0] 11 [a1]
+;;  ref usage 	r1={1d,1u} r2={1d,2u} r8={1d,2u} r10={2d,2u} r11={1d,1u} r12={1d} r13={1d} r14={1d} r15={1d} r16={1d} r17={1d} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r64={1d,1u} r65={1d,2u} r76={1d,1u} 
+;;    total ref usage 35{23d,12u,0e} in 3{3 regular + 0 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 3 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 3 5 4 2 NOTE_INSN_DELETED)
+(note 4 3 14 2 NOTE_INSN_FUNCTION_BEG)
+(insn 14 4 11 2 (set (reg:DI 76)
+        (reg:DI 11 a1 [ __c ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":1087:7 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 11 a1 [ __c ])
+        (nil)))
+(insn 11 14 12 2 (set (reg/i:DI 10 a0)
+        (reg:DI 76)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":1088:21 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 76)
+        (nil)))
+(insn 12 11 15 2 (use (reg/i:DI 10 a0)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":1088:21 -1
+     (nil))
+(note 15 12 0 NOTE_INSN_DELETED)
+
+;; Function std::endl.isra (_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0, funcdef_no=2298, decl_uid=49501, cgraph_uid=1045, symbol_order=1223)
+
+Starting decreasing number of live ranges...
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8
+;; 2 succs { 3 4 }
+;; 3 succs { }
+;; 4 succs { 5 6 }
+;; 5 succs { 8 }
+;; 6 succs { 8 7 }
+;; 7 succs { 8 }
+;; 8 succs { 1 }
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+Reg 93 uninteresting
+Ignoring reg 84, has equiv memory
+Reg 85 uninteresting
+Reg 86 uninteresting
+Reg 89 uninteresting
+Ignoring reg 90, has equiv memory
+Reg 91: local to bb 6 def dominates all uses has unique first use
+Reg 81 uninteresting
+Reg 94 uninteresting
+Ignoring reg 91 with equiv init insn
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8
+;; 2 succs { 3 4 }
+;; 3 succs { }
+;; 4 succs { 5 6 }
+;; 5 succs { 8 }
+;; 6 succs { 8 7 }
+;; 7 succs { 8 }
+;; 8 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+init_insns for 84: (insn_list:REG_DEP_TRUE 7 (nil))
+init_insns for 90: (insn_list:REG_DEP_TRUE 29 (nil))
+init_insns for 91: (insn_list:REG_DEP_TRUE 31 (nil))
+
+Pass 0 for finding pseudo/allocno costs
+
+    a2 (r94,l0) best GR_REGS, allocno GR_REGS
+    a11 (r93,l0) best GR_REGS, allocno GR_REGS
+    a5 (r91,l0) best GR_REGS, allocno GR_REGS
+    a6 (r90,l0) best GR_REGS, allocno GR_REGS
+    a7 (r89,l0) best GR_REGS, allocno GR_REGS
+    a8 (r86,l0) best GR_REGS, allocno GR_REGS
+    a9 (r85,l0) best GR_REGS, allocno GR_REGS
+    a10 (r84,l0) best GR_REGS, allocno GR_REGS
+    a0 (r83,l0) best GR_REGS, allocno GR_REGS
+    a3 (r81,l0) best JALR_REGS, allocno JALR_REGS
+    a1 (r79,l0) best GR_REGS, allocno GR_REGS
+    a4 (r77,l0) best GR_REGS, allocno GR_REGS
+
+  a0(r83,l0) costs: SIBCALL_REGS:1998,1998 JALR_REGS:1998,1998 GR_REGS:1998,1998 MEM:20995,20995
+  a1(r79,l0) costs: SIBCALL_REGS:1998,1998 JALR_REGS:1998,1998 GR_REGS:1998,1998 MEM:10087,10087
+  a2(r94,l0) costs: SIBCALL_REGS:194,194 JALR_REGS:194,194 GR_REGS:194,194 MEM:582,582
+  a3(r81,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:194,194 MEM:5365,5365
+  a4(r77,l0) costs: SIBCALL_REGS:1170,1170 JALR_REGS:1170,1170 GR_REGS:1170,1170 MEM:25355,25355
+  a5(r91,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:4880,4880
+  a6(r90,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:0,0
+  a7(r89,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:9990,9990
+  a8(r86,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:10000,10000
+  a9(r85,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:10000,10000
+  a10(r84,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:0,0
+  a11(r93,l0) costs: SIBCALL_REGS:2000,2000 JALR_REGS:2000,2000 GR_REGS:2000,2000 MEM:6000,6000
+
+
+Pass 1 for finding pseudo/allocno costs
+
+    r94: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r93: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r91: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r90: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r89: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r86: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r85: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r84: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r83: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r81: preferred JALR_REGS, alternative GR_REGS, allocno GR_REGS
+    r79: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r77: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+
+  a0(r83,l0) costs: GR_REGS:1998,1998 MEM:29990,29990
+  a1(r79,l0) costs: GR_REGS:1998,1998 MEM:15470,15470
+  a2(r94,l0) costs: GR_REGS:194,194 MEM:1455,1455
+  a3(r81,l0) costs: JALR_REGS:0,0 GR_REGS:194,194 MEM:5365,5365
+  a4(r77,l0) costs: GR_REGS:1170,1170 MEM:28280,28280
+  a5(r91,l0) costs: GR_REGS:0,0 MEM:4880,4880
+  a6(r90,l0) costs: GR_REGS:0,0 MEM:0,0
+  a7(r89,l0) costs: GR_REGS:0,0 MEM:9990,9990
+  a8(r86,l0) costs: GR_REGS:0,0 MEM:10000,10000
+  a9(r85,l0) costs: GR_REGS:0,0 MEM:10000,10000
+  a10(r84,l0) costs: GR_REGS:0,0 MEM:0,0
+  a11(r93,l0) costs: GR_REGS:2000,2000 MEM:15000,15000
+
+   Insn 46(l0): point = 0
+   Insn 43(l0): point = 2
+   Insn 42(l0): point = 4
+   Insn 41(l0): point = 6
+   Insn 37(l0): point = 9
+   Insn 57(l0): point = 11
+   Insn 36(l0): point = 13
+   Insn 35(l0): point = 15
+   Insn 34(l0): point = 17
+   Insn 32(l0): point = 20
+   Insn 30(l0): point = 22
+   Insn 4(l0): point = 24
+   Insn 31(l0): point = 26
+   Insn 29(l0): point = 28
+   Insn 28(l0): point = 30
+   Insn 27(l0): point = 32
+   Insn 58(l0): point = 35
+   Insn 22(l0): point = 37
+   Insn 20(l0): point = 40
+   Insn 19(l0): point = 42
+   Insn 13(l0): point = 45
+   Insn 11(l0): point = 48
+   Insn 10(l0): point = 50
+   Insn 9(l0): point = 52
+   Insn 8(l0): point = 54
+   Insn 7(l0): point = 56
+   Insn 2(l0): point = 58
+   Insn 56(l0): point = 60
+ a0(r83): [48..58] [5..44]
+ a1(r79): [35..37] [20..24] [7..9]
+ a2(r94): [10..11]
+ a3(r81): [14..22]
+ a4(r77): [48..50] [38..44] [16..34]
+ a5(r91): [21..26]
+ a6(r90): [23..28]
+ a7(r89): [41..42]
+ a8(r86): [51..52]
+ a9(r85): [53..54]
+ a10(r84): [55..56]
+ a11(r93): [59..60]
+Compressing live ranges: from 63 to 22 - 34%
+Ranges after the compression:
+ a0(r83): [0..19]
+ a1(r79): [4..9] [0..1]
+ a2(r94): [2..3]
+ a3(r81): [4..5]
+ a4(r77): [10..13] [4..7]
+ a5(r91): [4..7]
+ a6(r90): [6..7]
+ a7(r89): [10..11]
+ a8(r86): [14..15]
+ a9(r85): [16..17]
+ a10(r84): [18..19]
+ a11(r93): [20..21]
++++Allocating 88 bytes for conflict table (uncompressed size 96)
+;; a0(r83,l0) conflicts: a1(r79,l0) a2(r94,l0) a3(r81,l0) a5(r91,l0) a4(r77,l0) a6(r90,l0) a7(r89,l0) a8(r86,l0) a9(r85,l0) a10(r84,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a1(r79,l0) conflicts: a0(r83,l0) a3(r81,l0) a5(r91,l0) a4(r77,l0) a6(r90,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a2(r94,l0) conflicts: a0(r83,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a3(r81,l0) conflicts: a1(r79,l0) a0(r83,l0) a5(r91,l0) a4(r77,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a4(r77,l0) conflicts: a1(r79,l0) a0(r83,l0) a3(r81,l0) a5(r91,l0) a6(r90,l0) a7(r89,l0)
+;;     total conflict hard regs: 1 11
+;;     conflict hard regs: 1 11
+
+;; a5(r91,l0) conflicts: a1(r79,l0) a0(r83,l0) a3(r81,l0) a4(r77,l0) a6(r90,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a6(r90,l0) conflicts: a1(r79,l0) a0(r83,l0) a5(r91,l0) a4(r77,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a7(r89,l0) conflicts: a0(r83,l0) a4(r77,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a8(r86,l0) conflicts: a0(r83,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a9(r85,l0) conflicts: a0(r83,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a10(r84,l0) conflicts: a0(r83,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a11(r93,l0) conflicts:
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+
+  cp0:a1(r79)<->a2(r94)@97:move
+  cp1:a0(r83)<->a11(r93)@1000:move
+  cp2:a8(r86)<->a9(r85)@125:shuffle
+  pref0:a1(r79)<-hr11@1998
+  pref1:a0(r83)<-hr10@1998
+  pref2:a4(r77)<-hr10@682
+  pref3:a2(r94)<-hr10@194
+  pref4:a11(r93)<-hr10@2000
+  regions=1, blocks=9, points=22
+    allocnos=12 (big 0), copies=3, conflicts=0, ranges=14
+
+**** Allocnos coloring:
+
+
+  Loop 0 (parent -1, header bb2, depth 0)
+    bbs: 8 7 6 5 4 3 2
+    all: 0r83 1r79 2r94 3r81 4r77 5r91 6r90 7r89 8r86 9r85 10r84 11r93
+    modified regnos: 77 79 81 83 84 85 86 89 90 91 93 94
+    border:
+    Pressure: ALL_REGS=5
+ Removing pref1:hr10@1998
+    Hard reg set forest:
+      0:( 1 5-63)@0
+        1:( 1 5-31)@141974
+          2:( 5-10 12-31)@54220
+            3:( 5-9 12-31)@74706
+      Allocno a0r83 of GR_REGS(28) has 25 avail. regs  5-9 12-31, node:  5-9 12-31 (confl regs =  0-4 10-11 32-65)
+      Allocno a1r79 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a2r94 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a3r81 of GR_REGS(28) has 25 avail. regs  5-9 12-31, node:  5-9 12-31 (confl regs =  0-4 10-11 32-65)
+      Allocno a4r77 of GR_REGS(28) has 26 avail. regs  5-10 12-31, node:  5-10 12-31 (confl regs =  0-4 11 32-65)
+      Allocno a5r91 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a6r90 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a7r89 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a8r86 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a9r85 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a10r84 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a11r93 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Forming thread from colorable bucket:
+        Forming thread by copy 1:a0r83-a11r93 (freq=1000):
+          Result (freq=5999): a0r83(3999) a11r93(2000)
+        Forming thread by copy 2:a8r86-a9r85 (freq=125):
+          Result (freq=4000): a8r86(2000) a9r85(2000)
+        Forming thread by copy 0:a1r79-a2r94 (freq=97):
+          Result (freq=2289): a1r79(2095) a2r94(194)
+      Pushing a6(r90,l0)(cost 0)
+      Pushing a5(r91,l0)(cost 0)
+      Pushing a3(r81,l0)(cost 0)
+      Pushing a7(r89,l0)(cost 0)
+      Pushing a10(r84,l0)(cost 0)
+      Pushing a2(r94,l0)(cost 0)
+      Pushing a1(r79,l0)(cost 0)
+      Pushing a9(r85,l0)(cost 0)
+      Pushing a8(r86,l0)(cost 0)
+      Pushing a4(r77,l0)(cost 0)
+      Pushing a11(r93,l0)(cost 0)
+      Pushing a0(r83,l0)(cost 0)
+      Popping a0(r83,l0)  --         assign reg 8
+      Popping a11(r93,l0)  --         assign reg 10
+      Popping a4(r77,l0)  --         assign reg 9
+      Popping a8(r86,l0)  --         assign reg 15
+      Popping a9(r85,l0)  --         assign reg 15
+      Popping a1(r79,l0)  --         assign reg 11
+      Popping a2(r94,l0)  --         assign reg 10
+      Popping a10(r84,l0)  --         assign reg 15
+      Popping a7(r89,l0)  --         assign reg 15
+      Popping a3(r81,l0)  --         assign reg 15
+      Popping a5(r91,l0)  --         assign reg 14
+      Popping a6(r90,l0)  --         assign reg 15
+Disposition:
+    4:r77  l0     9    1:r79  l0    11    3:r81  l0    15    0:r83  l0     8
+   10:r84  l0    15    9:r85  l0    15    8:r86  l0    15    7:r89  l0    15
+    6:r90  l0    15    5:r91  l0    14   11:r93  l0    10    2:r94  l0    10
+New iteration of spill/restore move
++++Costs: overall -1024, reg -1024, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+std::endl.isra
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [zero] 3 [gp] 4 [tp] 5 [t0] 6 [t1] 7 [t2] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 28 [t3] 29 [t4] 30 [t5] 31 [t6] 32 [ft0] 33 [ft1] 34 [ft2] 35 [ft3] 36 [ft4] 37 [ft5] 38 [ft6] 39 [ft7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 60 [ft8] 61 [ft9] 62 [ft10] 63 [ft11]
+;;  hardware regs used 	 2 [sp] 64 [arg] 65 [frame]
+;;  regular block artificial uses 	 2 [sp] 8 [s0] 64 [arg] 65 [frame]
+;;  eh block artificial uses 	 2 [sp] 8 [s0] 64 [arg] 65 [frame]
+;;  entry block defs 	 1 [ra] 2 [sp] 8 [s0] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 64 [arg] 65 [frame]
+;;  exit block uses 	 1 [ra] 2 [sp] 8 [s0] 65 [frame]
+;;  regs ever live 	 1 [ra] 2 [sp] 10 [a0] 11 [a1]
+;;  ref usage 	r0={5d} r1={5d,1u} r2={1d,13u} r3={5d} r4={5d} r5={5d} r6={5d} r7={5d} r8={1d,8u} r10={9d,6u} r11={8d,2u} r12={6d} r13={6d} r14={6d} r15={6d} r16={6d} r17={6d} r28={5d} r29={5d} r30={5d} r31={5d} r32={5d} r33={5d} r34={5d} r35={5d} r36={5d} r37={5d} r38={5d} r39={5d} r42={6d} r43={6d} r44={6d} r45={6d} r46={6d} r47={6d} r48={6d} r49={6d} r60={5d} r61={5d} r62={5d} r63={5d} r64={1d,7u} r65={1d,8u} r77={1d,6u,1e} r79={3d,1u} r81={1d,2u} r83={1d,3u,1e} r84={1d,1u} r85={1d,1u} r86={1d,1u} r89={1d,1u} r90={1d,1u} r91={1d,1u} r93={1d,1u} r94={1d,1u} 
+;;    total ref usage 301{234d,65u,2e} in 28{23 regular + 5 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 3 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 3 5 56 2 NOTE_INSN_FUNCTION_BEG)
+(insn 56 3 2 2 (set (reg:DI 93)
+        (reg:DI 10 a0 [ __os ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":684:5 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 10 a0 [ __os ])
+        (nil)))
+(insn 2 56 7 2 (set (reg/v/f:DI 83 [ __os ])
+        (reg:DI 93)) "/usr/riscv64-linux-gnu/include/c++/11/ostream":684:5 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 93)
+        (nil)))
+(insn 7 2 8 2 (set (reg/f:DI 84 [ __os_1(D)->_vptr.basic_ostream ])
+        (mem/f:DI (reg/v/f:DI 83 [ __os ]) [2 __os_1(D)->_vptr.basic_ostream+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (mem/f:DI (reg/v/f:DI 83 [ __os ]) [2 __os_1(D)->_vptr.basic_ostream+0 S8 A64])
+        (nil)))
+(insn 8 7 9 2 (set (reg:DI 85 [ MEM[(long int *)_2 + -24B] ])
+        (mem:DI (plus:DI (reg/f:DI 84 [ __os_1(D)->_vptr.basic_ostream ])
+                (const_int -24 [0xffffffffffffffe8])) [9 MEM[(long int *)_2 + -24B]+0 S8 A64])) 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 84 [ __os_1(D)->_vptr.basic_ostream ])
+        (nil)))
+(insn 9 8 10 2 (set (reg/f:DI 86)
+        (plus:DI (reg/v/f:DI 83 [ __os ])
+            (reg:DI 85 [ MEM[(long int *)_2 + -24B] ]))) 4 {adddi3}
+     (expr_list:REG_DEAD (reg:DI 85 [ MEM[(long int *)_2 + -24B] ])
+        (nil)))
+(insn 10 9 11 2 (set (reg/f:DI 77 [ _13 ])
+        (mem/f:DI (plus:DI (reg/f:DI 86)
+                (const_int 240 [0xf0])) [6 MEM[(const struct __ctype_type * *)_5 + 240B]+0 S8 A64])) 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 86)
+        (nil)))
+(jump_insn 11 10 12 2 (set (pc)
+        (if_then_else (ne (reg/f:DI 77 [ _13 ])
+                (const_int 0 [0]))
+            (label_ref 15)
+            (pc))) "/usr/riscv64-linux-gnu/include/c++/11/bits/basic_ios.h":49:7 182 {*branchdi}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 15)
+(note 12 11 13 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(call_insn 13 12 14 3 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x775ee999e800 __throw_bad_cast>) [0 __throw_bad_cast S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/basic_ios.h":50:18 253 {call_internal}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x775ee999e800 __throw_bad_cast>)
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (nil)))
+    (nil))
+(barrier 14 13 15)
+(code_label 15 14 16 4 4 (nil) [1 uses])
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(note 17 16 19 4 NOTE_INSN_DELETED)
+(insn 19 17 20 4 (set (reg:DI 89 [ MEM[(const struct ctype *)_13]._M_widen_ok ])
+        (zero_extend:DI (mem:QI (plus:DI (reg/f:DI 77 [ _13 ])
+                    (const_int 56 [0x38])) [0 MEM[(const struct ctype *)_13]._M_widen_ok+0 S1 A64]))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 89 {zero_extendqidi2}
+     (nil))
+(jump_insn 20 19 21 4 (set (pc)
+        (if_then_else (eq (reg:DI 89 [ MEM[(const struct ctype *)_13]._M_widen_ok ])
+                (const_int 0 [0]))
+            (label_ref 25)
+            (pc))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 182 {*branchdi}
+     (expr_list:REG_DEAD (reg:DI 89 [ MEM[(const struct ctype *)_13]._M_widen_ok ])
+        (int_list:REG_BR_PROB 524845004 (nil)))
+ -> 25)
+(note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 58 5 (set (reg:DI 79 [ _18 ])
+        (zero_extend:DI (mem:QI (plus:DI (reg/f:DI 77 [ _13 ])
+                    (const_int 67 [0x43])) [0 MEM[(const struct ctype *)_13]._M_widen[10]+0 S1 A8]))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":878:51 89 {zero_extendqidi2}
+     (expr_list:REG_DEAD (reg/f:DI 77 [ _13 ])
+        (nil)))
+(jump_insn 58 22 59 5 (set (pc)
+        (label_ref 39)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":878:51 240 {jump}
+     (nil)
+ -> 39)
+(barrier 59 58 25)
+(code_label 25 59 26 6 5 (nil) [1 uses])
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (reg:DI 10 a0)
+        (reg/f:DI 77 [ _13 ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":879:21 135 {*movdi_64bit}
+     (nil))
+(call_insn 28 27 29 6 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x775ee883a200 _M_widen_init>) [0 _M_widen_init S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":879:21 253 {call_internal}
+     (expr_list:REG_DEAD (reg:DI 10 a0)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x775ee883a200 _M_widen_init>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 29 28 31 6 (set (reg/f:DI 90 [ MEM[(const struct ctype *)_13].D.37636._vptr.facet ])
+        (mem/f:DI (reg/f:DI 77 [ _13 ]) [2 MEM[(const struct ctype *)_13].D.37636._vptr.facet+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (mem/f:DI (reg/f:DI 77 [ _13 ]) [2 MEM[(const struct ctype *)_13].D.37636._vptr.facet+0 S8 A64])
+        (nil)))
+(insn 31 29 4 6 (set (reg/f:DI 91)
+        (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x775ee8831d00 do_widen>)) 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x775ee8831d00 do_widen>)
+        (nil)))
+(insn 4 31 30 6 (set (reg:DI 79 [ _18 ])
+        (const_int 10 [0xa])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (nil))
+(insn 30 4 32 6 (set (reg/f:DI 81 [ _22 ])
+        (mem/f:DI (plus:DI (reg/f:DI 90 [ MEM[(const struct ctype *)_13].D.37636._vptr.facet ])
+                (const_int 48 [0x30])) [4 MEM[(int (*) () *)_21 + 48B]+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 90 [ MEM[(const struct ctype *)_13].D.37636._vptr.facet ])
+        (nil)))
+(jump_insn 32 30 33 6 (set (pc)
+        (if_then_else (eq (reg/f:DI 81 [ _22 ])
+                (reg/f:DI 91))
+            (label_ref:DI 39)
+            (pc))) 182 {*branchdi}
+     (expr_list:REG_DEAD (reg/f:DI 91)
+        (int_list:REG_BR_PROB 858993460 (nil)))
+ -> 39)
+(note 33 32 34 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 7 (set (reg:DI 11 a1)
+        (const_int 10 [0xa])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (nil))
+(insn 35 34 36 7 (set (reg:DI 10 a0)
+        (reg/f:DI 77 [ _13 ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 77 [ _13 ])
+        (nil)))
+(call_insn 36 35 57 7 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (reg/f:DI 81 [ _22 ]) [0 *OBJ_TYPE_REF(_22;_13->6) S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 254 {call_value_internal}
+     (expr_list:REG_DEAD (reg/f:DI 81 [ _22 ])
+        (expr_list:REG_DEAD (reg:DI 11 a1)
+            (expr_list:REG_CALL_DECL (nil)
+                (nil))))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:QI (use (reg:DI 11 a1))
+            (nil))))
+(insn 57 36 37 7 (set (reg:DI 94)
+        (reg:DI 10 a0)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 10 a0)
+        (nil)))
+(insn 37 57 39 7 (set (reg:DI 79 [ _18 ])
+        (reg:DI 94)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 94)
+        (nil)))
+(code_label 39 37 40 8 6 (nil) [2 uses])
+(note 40 39 41 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 41 40 42 8 (set (reg:DI 11 a1)
+        (reg:DI 79 [ _18 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 79 [ _18 ])
+        (nil)))
+(insn 42 41 43 8 (set (reg:DI 10 a0)
+        (reg/v/f:DI 83 [ __os ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/v/f:DI 83 [ __os ])
+        (nil)))
+(call_insn 43 42 46 8 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x775ee86a8a00 put>) [0 put S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 254 {call_value_internal}
+     (expr_list:REG_DEAD (reg:DI 11 a1)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x775ee86a8a00 put>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:QI (use (reg:DI 11 a1))
+            (nil))))
+(call_insn/j 46 43 47 8 (set (reg:DI 10 a0)
+        (call (mem:SI (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x775ee86a8d00 flush>) [0 flush S4 A32])
+            (const_int 0 [0]))) "/usr/riscv64-linux-gnu/include/c++/11/ostream":707:24 252 {sibcall_value_internal}
+     (expr_list:REG_UNUSED (reg:DI 10 a0)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x775ee86a8d00 flush>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(barrier 47 46 0)
+
+;; Function main (main, funcdef_no=1808, decl_uid=44612, cgraph_uid=542, symbol_order=572) (executed once)
+
+Starting decreasing number of live ranges...
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8 9 10 11 12 13
+;;
+;; Loop 1
+;;  header 4, latch 10
+;;  depth 1, outer 0
+;;  nodes: 4 10 9 8 7 6
+;; 2 succs { 3 11 }
+;; 3 succs { 4 }
+;; 4 succs { 5 6 }
+;; 5 succs { }
+;; 6 succs { 7 8 }
+;; 7 succs { 10 }
+;; 8 succs { 10 9 }
+;; 9 succs { 10 }
+;; 10 succs { 4 11 }
+;; 11 succs { 13 12 }
+;; 12 succs { }
+;; 13 succs { 1 }
+Removing SCRATCH to p123 in insn #4 (nop 2)
+rescanning insn with uid = 4.
+Removing SCRATCH to p124 in insn #98 (nop 3)
+rescanning insn with uid = 98.
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 14 n_edges 17 count 19 (  1.4)
+Reg 117: def dominates all uses has unique first use
+Reg 123 uninteresting (no unique first use)
+Reg 97: local to bb 2 def dominates all uses has unique first use
+Reg 98 uninteresting
+Reg 118: def dominates all uses has unique first use
+Reg 119: def dominates all uses has unique first use
+Reg 73: def dominates all uses has unique first use
+Reg 121 uninteresting
+Ignoring reg 100, has equiv memory
+Reg 101 uninteresting
+Reg 102 uninteresting
+Reg 105 uninteresting
+Ignoring reg 106, has equiv memory
+Reg 89 uninteresting
+Reg 122 uninteresting
+Reg 112: local to bb 10 def dominates all uses has unique first use
+Reg 73 not local to one basic block
+Found def insn 31 for 97 to be not moveable
+Found def insn 88 for 112 to be not moveable
+Reg 117 not local to one basic block
+Reg 118 not local to one basic block
+Reg 119 not local to one basic block
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5 6 7 8 9 10 11 12 13
+;;
+;; Loop 1
+;;  header 4, latch 10
+;;  depth 1, outer 0
+;;  nodes: 4 10 9 8 7 6
+;; 2 succs { 3 11 }
+;; 3 succs { 4 }
+;; 4 succs { 5 6 }
+;; 5 succs { }
+;; 6 succs { 7 8 }
+;; 7 succs { 10 }
+;; 8 succs { 10 9 }
+;; 9 succs { 10 }
+;; 10 succs { 4 11 }
+;; 11 succs { 13 12 }
+;; 12 succs { }
+;; 13 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+init_insns for 98: (insn_list:REG_DEP_TRUE 32 (nil))
+init_insns for 100: (insn_list:REG_DEP_TRUE 42 (nil))
+init_insns for 106: (insn_list:REG_DEP_TRUE 64 (nil))
+init_insns for 117: (insn_list:REG_DEP_TRUE 3 (nil))
+init_insns for 118: (insn_list:REG_DEP_TRUE 39 (nil))
+init_insns for 119: (insn_list:REG_DEP_TRUE 66 (nil))
+
+Pass 0 for finding pseudo/allocno costs
+
+    a2 (r124,l0) best GR_REGS, allocno GR_REGS
+    a10 (r123,l0) best GR_REGS, allocno GR_REGS
+    a21 (r122,l1) best GR_REGS, allocno GR_REGS
+    a29 (r121,l1) best GR_REGS, allocno GR_REGS
+    a16 (r119,l1) best GR_REGS, allocno GR_REGS
+    a3 (r119,l0) best GR_REGS, allocno GR_REGS
+    a15 (r118,l1) best GR_REGS, allocno GR_REGS
+    a4 (r118,l0) best GR_REGS, allocno GR_REGS
+    a14 (r117,l1) best GR_REGS, allocno GR_REGS
+    a1 (r117,l0) best GR_REGS, allocno GR_REGS
+    a0 (r116,l0) best GR_REGS, allocno GR_REGS
+    a17 (r112,l1) best GR_REGS, allocno GR_REGS
+    a24 (r106,l1) best GR_REGS, allocno GR_REGS
+    a25 (r105,l1) best GR_REGS, allocno GR_REGS
+    a26 (r102,l1) best GR_REGS, allocno GR_REGS
+    a27 (r101,l1) best GR_REGS, allocno GR_REGS
+    a28 (r100,l1) best GR_REGS, allocno GR_REGS
+    a8 (r98,l0) best GR_REGS, allocno GR_REGS
+    a9 (r97,l0) best GR_REGS, allocno GR_REGS
+    a22 (r89,l1) best JALR_REGS, allocno JALR_REGS
+    a20 (r87,l1) best GR_REGS, allocno GR_REGS
+    a23 (r85,l1) best GR_REGS, allocno GR_REGS
+    a13 (r79,l1) best GR_REGS, allocno GR_REGS
+    a7 (r79,l0) best GR_REGS, allocno GR_REGS
+    a19 (r78,l1) best GR_REGS, allocno GR_REGS
+    a12 (r77,l1) best GR_REGS, allocno GR_REGS
+    a6 (r77,l0) best GR_REGS, allocno GR_REGS
+    a11 (r74,l1) best GR_REGS, allocno GR_REGS
+    a5 (r74,l0) best GR_REGS, allocno GR_REGS
+    a18 (r73,l1) best GR_REGS, allocno GR_REGS
+
+  a0(r116,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:1100,1100
+  a1(r117,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:1650,1650
+  a2(r124,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:550,550
+  a3(r119,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:490,2660
+  a4(r118,l0) costs: SIBCALL_REGS:0,1780 JALR_REGS:0,1780 GR_REGS:0,1780 MEM:490,4940
+  a5(r74,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:98,5437
+  a6(r77,l0) costs: SIBCALL_REGS:0,1780 JALR_REGS:0,1780 GR_REGS:0,1780 MEM:490,14730
+  a7(r79,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:490,13825
+  a8(r98,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:1100,1100
+  a9(r97,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:1100,1100
+  a10(r123,l0) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:550,550
+  a11(r74,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:5339,5339
+  a12(r77,l1) costs: SIBCALL_REGS:1780,1780 JALR_REGS:1780,1780 GR_REGS:1780,1780 MEM:14240,14240
+  a13(r79,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:13335,13335
+  a14(r117,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:0,0
+  a15(r118,l1) costs: SIBCALL_REGS:1780,1780 JALR_REGS:1780,1780 GR_REGS:1780,1780 MEM:4450,4450
+  a16(r119,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:2170,2170
+  a17(r112,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:8890,8890
+  a18(r73,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:1779,1779
+  a19(r78,l1) costs: SIBCALL_REGS:1778,1778 JALR_REGS:1778,1778 GR_REGS:1778,1778 MEM:18685,18685
+  a20(r87,l1) costs: SIBCALL_REGS:1778,1778 JALR_REGS:1778,1778 GR_REGS:1778,1778 MEM:8972,8972
+  a21(r122,l1) costs: SIBCALL_REGS:174,174 JALR_REGS:174,174 GR_REGS:174,174 MEM:522,522
+  a22(r89,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:174,174 MEM:4775,4775
+  a23(r85,l1) costs: SIBCALL_REGS:1042,1042 JALR_REGS:1042,1042 GR_REGS:1042,1042 MEM:22560,22560
+  a24(r106,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:0,0
+  a25(r105,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:8890,8890
+  a26(r102,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:8900,8900
+  a27(r101,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:8900,8900
+  a28(r100,l1) costs: SIBCALL_REGS:0,0 JALR_REGS:0,0 GR_REGS:0,0 MEM:0,0
+  a29(r121,l1) costs: SIBCALL_REGS:1780,1780 JALR_REGS:1780,1780 GR_REGS:1780,1780 MEM:5340,5340
+
+
+Pass 1 for finding pseudo/allocno costs
+
+    r124: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r123: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r122: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r121: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r119: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r118: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r117: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r116: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r112: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r106: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r105: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r102: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r101: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r100: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r98: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r97: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r89: preferred JALR_REGS, alternative GR_REGS, allocno GR_REGS
+    r87: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r85: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r79: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r78: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r77: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r74: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+    r73: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+
+  a0(r116,l0) costs: GR_REGS:0,0 MEM:1100,1100
+  a1(r117,l0) costs: GR_REGS:0,0 MEM:1650,1650
+  a2(r124,l0) costs: GR_REGS:0,0 MEM:550,550
+  a3(r119,l0) costs: GR_REGS:0,0 MEM:490,2660
+  a4(r118,l0) costs: GR_REGS:0,1780 MEM:490,9390
+  a5(r74,l0) costs: GR_REGS:0,0 MEM:490,9385
+  a6(r77,l0) costs: GR_REGS:0,1780 MEM:490,22740
+  a7(r79,l0) costs: GR_REGS:0,0 MEM:490,13825
+  a8(r98,l0) costs: GR_REGS:0,0 MEM:1100,1100
+  a9(r97,l0) costs: GR_REGS:0,0 MEM:1100,1100
+  a10(r123,l0) costs: GR_REGS:0,0 MEM:550,550
+  a11(r74,l1) costs: GR_REGS:0,0 MEM:8895,8895
+  a12(r77,l1) costs: GR_REGS:1780,1780 MEM:22250,22250
+  a13(r79,l1) costs: GR_REGS:0,0 MEM:13335,13335
+  a14(r117,l1) costs: GR_REGS:0,0 MEM:0,0
+  a15(r118,l1) costs: GR_REGS:1780,1780 MEM:8900,8900
+  a16(r119,l1) costs: GR_REGS:0,0 MEM:2170,2170
+  a17(r112,l1) costs: GR_REGS:0,0 MEM:8890,8890
+  a18(r73,l1) costs: GR_REGS:0,0 MEM:8895,8895
+  a19(r78,l1) costs: GR_REGS:1778,1778 MEM:26690,26690
+  a20(r87,l1) costs: GR_REGS:1778,1778 MEM:13765,13765
+  a21(r122,l1) costs: GR_REGS:174,174 MEM:1305,1305
+  a22(r89,l1) costs: JALR_REGS:0,0 GR_REGS:174,174 MEM:4775,4775
+  a23(r85,l1) costs: GR_REGS:1042,1042 MEM:25165,25165
+  a24(r106,l1) costs: GR_REGS:0,0 MEM:0,0
+  a25(r105,l1) costs: GR_REGS:0,0 MEM:8890,8890
+  a26(r102,l1) costs: GR_REGS:0,0 MEM:8900,8900
+  a27(r101,l1) costs: GR_REGS:0,0 MEM:8900,8900
+  a28(r100,l1) costs: GR_REGS:0,0 MEM:0,0
+  a29(r121,l1) costs: GR_REGS:1780,1780 MEM:13350,13350
+
+   Insn 104(l0): point = 0
+   Insn 103(l0): point = 2
+   Insn 100(l0): point = 5
+   Insn 99(l0): point = 8
+   Insn 98(l0): point = 10
+   Insn 48(l0): point = 13
+   Insn 66(l0): point = 16
+   Insn 39(l0): point = 18
+   Insn 7(l0): point = 20
+   Insn 6(l0): point = 22
+   Insn 5(l0): point = 24
+   Insn 33(l0): point = 27
+   Insn 32(l0): point = 29
+   Insn 31(l0): point = 31
+   Insn 26(l0): point = 33
+   Insn 23(l0): point = 35
+   Insn 22(l0): point = 37
+   Insn 21(l0): point = 39
+   Insn 20(l0): point = 41
+   Insn 17(l0): point = 43
+   Insn 16(l0): point = 45
+   Insn 15(l0): point = 47
+   Insn 14(l0): point = 49
+   Insn 4(l0): point = 51
+   Insn 13(l0): point = 53
+   Insn 3(l0): point = 55
+   Insn 12(l0): point = 57
+   Insn 46(l1): point = 60
+   Insn 45(l1): point = 62
+   Insn 44(l1): point = 64
+   Insn 43(l1): point = 66
+   Insn 42(l1): point = 68
+   Insn 41(l1): point = 70
+   Insn 121(l1): point = 72
+   Insn 40(l1): point = 74
+   Insn 117(l1): point = 76
+   Insn 38(l1): point = 78
+   Insn 37(l1): point = 80
+   Insn 35(l1): point = 82
+   Insn 90(l1): point = 85
+   Insn 84(l1): point = 87
+   Insn 83(l1): point = 89
+   Insn 88(l1): point = 91
+   Insn 81(l1): point = 93
+   Insn 78(l1): point = 95
+   Insn 77(l1): point = 97
+   Insn 76(l1): point = 99
+   Insn 72(l1): point = 102
+   Insn 122(l1): point = 104
+   Insn 71(l1): point = 106
+   Insn 70(l1): point = 108
+   Insn 120(l1): point = 110
+   Insn 67(l1): point = 113
+   Insn 65(l1): point = 115
+   Insn 119(l1): point = 117
+   Insn 64(l1): point = 119
+   Insn 63(l1): point = 121
+   Insn 62(l1): point = 123
+   Insn 123(l1): point = 126
+   Insn 57(l1): point = 128
+   Insn 55(l1): point = 131
+   Insn 54(l1): point = 133
+ a0(r116): [9..10]
+ a1(r117): [16..55] [11..12]
+ a2(r124): [10..10]
+ a3(r119): [16..16]
+ a4(r118): [16..18]
+ a5(r74): [16..20]
+ a6(r77): [16..22]
+ a7(r79): [16..24]
+ a8(r98): [28..29]
+ a9(r97): [28..31]
+ a10(r123): [51..51]
+ a11(r74): [81..87]
+ a12(r77): [60..135]
+ a13(r79): [60..135]
+ a14(r117): [60..135]
+ a15(r118): [60..135]
+ a16(r119): [60..135]
+ a17(r112): [86..91]
+ a18(r73): [88..135] [60..82]
+ a19(r78): [98..135] [60..70]
+ a20(r87): [126..128] [113..117] [100..102]
+ a21(r122): [103..104]
+ a22(r89): [107..115]
+ a23(r85): [129..135] [109..125] [60..62]
+ a24(r106): [116..119]
+ a25(r105): [132..133]
+ a26(r102): [63..64]
+ a27(r101): [65..66]
+ a28(r100): [67..68]
+ a29(r121): [71..72]
+ Rebuilding regno allocno list for 122
+ Rebuilding regno allocno list for 121
+      Moving ranges of a16r119 to a3r119:  [60..135]
+      Moving ranges of a15r118 to a4r118:  [60..135]
+      Moving ranges of a14r117 to a1r117:  [60..135]
+ Rebuilding regno allocno list for 112
+ Rebuilding regno allocno list for 106
+ Rebuilding regno allocno list for 105
+ Rebuilding regno allocno list for 102
+ Rebuilding regno allocno list for 101
+ Rebuilding regno allocno list for 100
+ Rebuilding regno allocno list for 89
+ Rebuilding regno allocno list for 87
+ Rebuilding regno allocno list for 85
+      Moving ranges of a13r79 to a7r79:  [60..135]
+ Rebuilding regno allocno list for 78
+      Moving ranges of a12r77 to a6r77:  [60..135]
+      Moving ranges of a11r74 to a5r74:  [81..87]
+ Rebuilding regno allocno list for 73
+Compressing live ranges: from 136 to 38 - 27%
+Ranges after the compression:
+ a0(r116): [0..1]
+ a1(r117): [2..37]
+ a2(r124): [1..1]
+ a3(r119): [10..37] [4..4]
+ a4(r118): [10..37] [4..5]
+ a5(r74): [20..23] [4..5]
+ a6(r77): [10..37] [4..5]
+ a7(r79): [10..37] [4..5]
+ a8(r98): [6..7]
+ a9(r97): [6..7]
+ a10(r123): [8..8]
+ a17(r112): [22..25]
+ a18(r73): [24..37] [10..21]
+ a19(r78): [26..37] [10..17]
+ a20(r87): [30..35] [26..27]
+ a21(r122): [28..29]
+ a22(r89): [30..31]
+ a23(r85): [36..37] [30..33] [10..11]
+ a24(r106): [32..33]
+ a25(r105): [36..37]
+ a26(r102): [12..13]
+ a27(r101): [14..15]
+ a28(r100): [16..17]
+ a29(r121): [18..19]
++++Allocating 192 bytes for conflict table (uncompressed size 240)
+;; a0(r116,l0) conflicts: a2(r124,l0)
+;;     total conflict hard regs: 1
+;;     conflict hard regs: 1
+
+;; a1(r117,l0) conflicts: a5(r74,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a8(r98,l0) a9(r97,l0) a10(r123,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0) a26(r102,l0) a27(r101,l0) a28(r100,l0) a29(r121,l0) a17(r112,l0) a20(r87,l0) a21(r122,l0) a22(r89,l0) a24(r106,l0) a25(r105,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a2(r124,l0) conflicts: a0(r116,l0)
+;;     total conflict hard regs: 1
+;;     conflict hard regs: 1
+
+;; a3(r119,l0) conflicts: a1(r117,l0) a5(r74,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0) a26(r102,l0) a27(r101,l0) a28(r100,l0) a29(r121,l0) a17(r112,l0) a20(r87,l0) a21(r122,l0) a22(r89,l0) a24(r106,l0) a25(r105,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a4(r118,l0) conflicts: a1(r117,l0) a5(r74,l0) a3(r119,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0) a26(r102,l0) a27(r101,l0) a28(r100,l0) a29(r121,l0) a17(r112,l0) a20(r87,l0) a21(r122,l0) a22(r89,l0) a24(r106,l0) a25(r105,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a5(r74,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a17(r112,l0)
+;;     total conflict hard regs: 1
+;;     conflict hard regs: 1
+
+;; a6(r77,l0) conflicts: a1(r117,l0) a5(r74,l0) a3(r119,l0) a4(r118,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0) a26(r102,l0) a27(r101,l0) a28(r100,l0) a29(r121,l0) a17(r112,l0) a20(r87,l0) a21(r122,l0) a22(r89,l0) a24(r106,l0) a25(r105,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a7(r79,l0) conflicts: a1(r117,l0) a5(r74,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0) a26(r102,l0) a27(r101,l0) a28(r100,l0) a29(r121,l0) a17(r112,l0) a20(r87,l0) a21(r122,l0) a22(r89,l0) a24(r106,l0) a25(r105,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a8(r98,l0) conflicts: a1(r117,l0) a9(r97,l0)
+;;     total conflict hard regs: 1
+;;     conflict hard regs: 1
+
+;; a9(r97,l0) conflicts: a1(r117,l0) a8(r98,l0)
+;;     total conflict hard regs: 1
+;;     conflict hard regs: 1
+
+;; a10(r123,l0) conflicts: a1(r117,l0)
+;;     total conflict hard regs: 10-11
+;;     conflict hard regs: 10-11
+
+;; a17(r112,l0) conflicts: a1(r117,l0) a5(r74,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0)
+;;     total conflict hard regs: 1
+;;     conflict hard regs: 1
+
+;; a18(r73,l0) conflicts: a1(r117,l0) a5(r74,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a19(r78,l0) a23(r85,l0) a26(r102,l0) a27(r101,l0) a28(r100,l0) a29(r121,l0) a17(r112,l0) a20(r87,l0) a21(r122,l0) a22(r89,l0) a24(r106,l0) a25(r105,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a19(r78,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a23(r85,l0) a26(r102,l0) a27(r101,l0) a28(r100,l0) a20(r87,l0) a21(r122,l0) a22(r89,l0) a24(r106,l0) a25(r105,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a20(r87,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0) a22(r89,l0) a24(r106,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a21(r122,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a22(r89,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0) a20(r87,l0)
+;;     total conflict hard regs: 1 10-11
+;;     conflict hard regs: 1 10-11
+
+;; a23(r85,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0) a20(r87,l0) a22(r89,l0) a24(r106,l0) a25(r105,l0)
+;;     total conflict hard regs: 1 11
+;;     conflict hard regs: 1 11
+
+;; a24(r106,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0) a20(r87,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a25(r105,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0) a23(r85,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a26(r102,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a27(r101,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a28(r100,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0) a19(r78,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+;; a29(r121,l0) conflicts: a1(r117,l0) a3(r119,l0) a4(r118,l0) a6(r77,l0) a7(r79,l0) a18(r73,l0)
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+
+  cp0:a20(r87)<->a21(r122)@87:move
+  cp1:a19(r78)<->a29(r121)@890:move
+  cp2:a26(r102)<->a27(r101)@111:shuffle
+  pref0:a20(r87)<-hr11@1778
+  pref1:a19(r78)<-hr10@1778
+  pref2:a23(r85)<-hr10@608
+  pref3:a21(r122)<-hr10@174
+  pref5:a6(r77)<-hr11@890
+  pref7:a4(r118)<-hr10@890
+  pref8:a29(r121)<-hr10@1780
+  regions=2, blocks=14, points=38
+    allocnos=30 (big 0), copies=3, conflicts=0, ranges=34
+
+**** Allocnos coloring:
+
+
+  Loop 0 (parent -1, header bb2, depth 0)
+    bbs: 13 12 11 5 10 9 8 7 6 4 3 2
+    all: 0r116 1r117 2r124 3r119 4r118 5r74 6r77 7r79 8r98 9r97 10r123 17r112 18r73 19r78 20r87 21r122 22r89 23r85 24r106 25r105 26r102 27r101 28r100 29r121
+    modified regnos: 73 74 77 78 79 85 87 89 97 98 100 101 102 105 106 112 116 117 118 119 121 122 123 124
+    border:
+    Pressure: ALL_REGS=11
+ Removing pref7:hr10@890
+ Removing pref5:hr11@890
+ Removing pref1:hr10@1778
+    Hard reg set forest:
+      0:( 1 5-63)@0
+        1:( 1 5-31)@117684
+          2:( 5-31)@44250
+            3:( 5-10 12-31)@48246
+              4:( 5-9 12-31)@67036
+                5:( 8-9 18-27)@111200
+      Allocno a0r116 of GR_REGS(28) has 27 avail. regs  5-31, node:  5-31 (confl regs =  0-4 32-65)
+      Allocno a1r117 of GR_REGS(28) has 12 avail. regs  8-9 18-27, node:  8-9 18-27 (confl regs =  0-4 10-11 32-65)
+      Allocno a2r124 of GR_REGS(28) has 27 avail. regs  5-31, node:  5-31 (confl regs =  0-4 32-65)
+      Allocno a3r119 of GR_REGS(28) has 12 avail. regs  8-9 18-27, node:  8-9 18-27 (confl regs =  0-4 10-11 32-65)
+      Allocno a4r118 of GR_REGS(28) has 12 avail. regs  8-9 18-27, node:  8-9 18-27 (confl regs =  0-4 10-11 32-65)
+      Allocno a5r74 of GR_REGS(28) has 27 avail. regs  5-31, node:  5-31 (confl regs =  0-4 32-65)
+      Allocno a6r77 of GR_REGS(28) has 12 avail. regs  8-9 18-27, node:  8-9 18-27 (confl regs =  0-4 10-11 32-65)
+      Allocno a7r79 of GR_REGS(28) has 12 avail. regs  8-9 18-27, node:  8-9 18-27 (confl regs =  0-4 10-11 32-65)
+      Allocno a8r98 of GR_REGS(28) has 27 avail. regs  5-31, node:  5-31 (confl regs =  0-4 32-65)
+      Allocno a9r97 of GR_REGS(28) has 27 avail. regs  5-31, node:  5-31 (confl regs =  0-4 32-65)
+      Allocno a10r123 of GR_REGS(28) has 26 avail. regs  1 5-9 12-31, ^node:  1 5-31 (confl regs =  0 2-4 10-11 32-65)
+      Allocno a17r112 of GR_REGS(28) has 27 avail. regs  5-31, node:  5-31 (confl regs =  0-4 32-65)
+      Allocno a18r73 of GR_REGS(28) has 12 avail. regs  8-9 18-27, node:  8-9 18-27 (confl regs =  0-4 10-11 32-65)
+      Allocno a19r78 of GR_REGS(28) has 25 avail. regs  5-9 12-31, node:  5-9 12-31 (confl regs =  0-4 10-11 32-65)
+      Allocno a20r87 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a21r122 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a22r89 of GR_REGS(28) has 25 avail. regs  5-9 12-31, node:  5-9 12-31 (confl regs =  0-4 10-11 32-65)
+      Allocno a23r85 of GR_REGS(28) has 26 avail. regs  5-10 12-31, node:  5-10 12-31 (confl regs =  0-4 11 32-65)
+      Allocno a24r106 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a25r105 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a26r102 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a27r101 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a28r100 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Allocno a29r121 of GR_REGS(28) has 28 avail. regs  1 5-31, node:  1 5-31 (confl regs =  0 2-4 32-65)
+      Forming thread from colorable bucket:
+        Forming thread by copy 1:a19r78-a29r121 (freq=890):
+          Result (freq=5339): a19r78(3559) a29r121(1780)
+        Forming thread by copy 2:a26r102-a27r101 (freq=111):
+          Result (freq=3560): a26r102(1780) a27r101(1780)
+        Forming thread by copy 0:a20r87-a21r122 (freq=87):
+          Result (freq=2038): a20r87(1864) a21r122(174)
+      Pushing a10(r123,l0)(cost 0)
+      Pushing a2(r124,l0)(cost 0)
+      Pushing a9(r97,l0)(cost 0)
+      Pushing a8(r98,l0)(cost 0)
+      Pushing a0(r116,l0)(cost 0)
+      Pushing a24(r106,l0)(cost 0)
+      Pushing a22(r89,l0)(cost 0)
+      Pushing a25(r105,l0)(cost 0)
+      Pushing a17(r112,l0)(cost 0)
+      Pushing a28(r100,l0)(cost 0)
+      Pushing a5(r74,l0)(cost 0)
+      Pushing a21(r122,l0)(cost 0)
+      Forming thread from allocno a1r117:
+        Making a1(r117,l0) colorable
+      Forming thread from allocno a3r119:
+        Making a3(r119,l0) colorable
+      Forming thread from allocno a4r118:
+        Making a4(r118,l0) colorable
+      Forming thread from allocno a6r77:
+        Making a6(r77,l0) colorable
+      Forming thread from allocno a7r79:
+        Making a7(r79,l0) colorable
+      Forming thread from allocno a18r73:
+        Making a18(r73,l0) colorable
+      Pushing a1(r117,l0)(cost 1650)
+      Pushing a3(r119,l0)(cost 2660)
+      Pushing a4(r118,l0)(cost 7610)
+      Pushing a18(r73,l0)(cost 8895)
+      Pushing a20(r87,l0)(cost 0)
+      Pushing a7(r79,l0)(cost 13825)
+      Pushing a27(r101,l0)(cost 0)
+      Pushing a26(r102,l0)(cost 0)
+      Pushing a6(r77,l0)(cost 20960)
+      Pushing a23(r85,l0)(cost 0)
+      Pushing a29(r121,l0)(cost 0)
+      Pushing a19(r78,l0)(cost 0)
+      Popping a19(r78,l0)  --         assign reg 8
+      Popping a29(r121,l0)  --         assign reg 10
+      Popping a23(r85,l0)  --         assign reg 9
+      Popping a6(r77,l0)  --         assign reg 18
+      Popping a26(r102,l0)  --         assign reg 15
+      Popping a27(r101,l0)  --         assign reg 15
+      Popping a7(r79,l0)  --         assign reg 19
+      Popping a20(r87,l0)  --         assign reg 11
+      Popping a18(r73,l0)  --         assign reg 20
+      Popping a4(r118,l0)  --         assign reg 21
+      Popping a3(r119,l0)  --         assign reg 22
+      Popping a1(r117,l0)  --         assign reg 23
+      Popping a21(r122,l0)  --         assign reg 10
+      Popping a5(r74,l0)  --         assign reg 15
+      Popping a28(r100,l0)  --         assign reg 15
+      Popping a17(r112,l0)  --         assign reg 14
+      Popping a25(r105,l0)  --         assign reg 15
+      Popping a22(r89,l0)  --         assign reg 15
+      Popping a24(r106,l0)  --         assign reg 15
+      Popping a0(r116,l0)  --         assign reg 15
+      Popping a8(r98,l0)  --         assign reg 15
+      Popping a9(r97,l0)  --         assign reg 14
+      Popping a2(r124,l0)  --         assign reg 14
+      Popping a10(r123,l0)  --         assign reg 15
+Disposition:
+   18:r73  l0    20    5:r74  l0    15    6:r77  l0    18   19:r78  l0     8
+    7:r79  l0    19   23:r85  l0     9   20:r87  l0    11   22:r89  l0    15
+    9:r97  l0    14    8:r98  l0    15   28:r100 l0    15   27:r101 l0    15
+   26:r102 l0    15   25:r105 l0    15   24:r106 l0    15   17:r112 l0    14
+    0:r116 l0    15    1:r117 l0    23    4:r118 l0    21    3:r119 l0    22
+   29:r121 l0    10   21:r122 l0    10   10:r123 l0    15    2:r124 l0    14
+New iteration of spill/restore move
++++Costs: overall 2648, reg 2648, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [zero] 3 [gp] 4 [tp] 5 [t0] 6 [t1] 7 [t2] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 28 [t3] 29 [t4] 30 [t5] 31 [t6] 32 [ft0] 33 [ft1] 34 [ft2] 35 [ft3] 36 [ft4] 37 [ft5] 38 [ft6] 39 [ft7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 60 [ft8] 61 [ft9] 62 [ft10] 63 [ft11]
+;;  hardware regs used 	 2 [sp] 64 [arg] 65 [frame]
+;;  regular block artificial uses 	 2 [sp] 8 [s0] 64 [arg] 65 [frame]
+;;  eh block artificial uses 	 2 [sp] 8 [s0] 64 [arg] 65 [frame]
+;;  entry block defs 	 1 [ra] 2 [sp] 8 [s0] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 64 [arg] 65 [frame]
+;;  exit block uses 	 1 [ra] 2 [sp] 8 [s0] 10 [a0] 65 [frame]
+;;  regs ever live 	 1 [ra] 2 [sp] 10 [a0] 11 [a1]
+;;  ref usage 	r0={12d} r1={13d,1u} r2={1d,25u} r3={12d} r4={12d} r5={12d} r6={12d} r7={12d} r8={1d,13u} r10={21d,14u} r11={19d,6u} r12={13d} r13={13d} r14={13d} r15={13d} r16={13d} r17={13d} r28={12d} r29={12d} r30={12d} r31={12d} r32={12d} r33={12d} r34={12d} r35={12d} r36={12d} r37={12d} r38={12d} r39={12d} r42={13d} r43={13d} r44={13d} r45={13d} r46={13d} r47={13d} r48={13d} r49={13d} r60={12d} r61={12d} r62={12d} r63={12d} r64={1d,12u} r65={1d,18u} r73={1d,1u} r74={2d,1u} r77={2d,3u} r78={1d,3u,1e} r79={2d,2u} r85={1d,6u,1e} r87={3d,1u} r89={1d,2u} r97={1d,1u} r98={1d,1u} r100={1d,1u} r101={1d,1u} r102={1d,1u} r105={1d,1u} r106={1d,1u} r112={1d,1u} r116={1d,1u} r117={1d,2u} r118={1d,1u} r119={1d,1u} r121={1d,1u} r122={1d,1u} r123={1d} r124={1d} 
+;;    total ref usage 657{532d,123u,2e} in 62{50 regular + 12 call} insns.
+(note 1 0 9 NOTE_INSN_DELETED)
+(note 9 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 9 11 2 NOTE_INSN_FUNCTION_BEG)
+(note 11 2 29 2 NOTE_INSN_DELETED)
+(note 29 11 12 2 NOTE_INSN_DELETED)
+(insn 12 29 3 2 (set (reg:DI 11 a1)
+        (plus:DI (reg/f:DI 65 frame)
+            (const_int -12 [0xfffffffffffffff4]))) "Fibonacci.cpp":10:12 4 {adddi3}
+     (nil))
+(insn 3 12 13 2 (set (reg/f:DI 117)
+        (symbol_ref:DI ("__stack_chk_guard") [flags 0xc0]  <var_decl 0x775ee803f1b0 __stack_chk_guard>)) "Fibonacci.cpp":4:12 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (symbol_ref:DI ("__stack_chk_guard") [flags 0xc0]  <var_decl 0x775ee803f1b0 __stack_chk_guard>)
+        (nil)))
+(insn 13 3 4 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt3cin") [flags 0xc0]  <var_decl 0x775ee842b090 cin>)) "Fibonacci.cpp":10:12 135 {*movdi_64bit}
+     (nil))
+(insn 4 13 14 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 65 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [14 D.49567+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f/c:DI (reg/f:DI 117) [14 __stack_chk_guard+0 S8 A64])
+                    ] UNSPEC_FLE_QUIET))
+            (set (reg:DI 123)
+                (const_int 0 [0]))
+        ]) "Fibonacci.cpp":4:12 268 {stack_protect_set_di}
+     (expr_list:REG_UNUSED (reg:DI 123)
+        (nil)))
+(call_insn 14 4 15 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x775ee8337000 operator>>>) [0 operator>> S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":10:12 254 {call_value_internal}
+     (expr_list:REG_DEAD (reg:DI 11 a1)
+        (expr_list:REG_UNUSED (reg:DI 10 a0)
+            (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSirsERi") [flags 0x41]  <function_decl 0x775ee8337000 operator>>>)
+                (nil))))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (nil))))
+(insn 15 14 16 2 (set (reg:DI 11 a1)
+        (const_int 0 [0])) "Fibonacci.cpp":11:13 135 {*movdi_64bit}
+     (nil))
+(insn 16 15 17 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0xc0]  <var_decl 0x775ee842b120 cout>)) "Fibonacci.cpp":11:13 135 {*movdi_64bit}
+     (nil))
+(call_insn 17 16 20 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":11:13 254 {call_value_internal}
+     (expr_list:REG_DEAD (reg:DI 11 a1)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(call_insn 20 17 21 2 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x775ee7fee100 endl.isra>) [0 endl.isra S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":113:13 253 {call_internal}
+     (expr_list:REG_DEAD (reg:DI 10 a0)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x775ee7fee100 endl.isra>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 21 20 22 2 (set (reg:DI 11 a1)
+        (const_int 1 [0x1])) "Fibonacci.cpp":12:13 135 {*movdi_64bit}
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0xc0]  <var_decl 0x775ee842b120 cout>)) "Fibonacci.cpp":12:13 135 {*movdi_64bit}
+     (nil))
+(call_insn 23 22 26 2 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":12:13 254 {call_value_internal}
+     (expr_list:REG_DEAD (reg:DI 11 a1)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(call_insn 26 23 31 2 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x775ee7fee100 endl.isra>) [0 endl.isra S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":113:13 253 {call_internal}
+     (expr_list:REG_DEAD (reg:DI 10 a0)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0") [flags 0x3]  <function_decl 0x775ee7fee100 endl.isra>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 31 26 32 2 (set (reg:DI 97 [ n ])
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [5 n+0 S4 A32]))) "Fibonacci.cpp":13:14 90 {extendsidi2}
+     (nil))
+(insn 32 31 33 2 (set (reg:DI 98)
+        (const_int 1 [0x1])) "Fibonacci.cpp":13:14 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (const_int 1 [0x1])
+        (nil)))
+(jump_insn 33 32 106 2 (set (pc)
+        (if_then_else (le (reg:DI 97 [ n ])
+                (reg:DI 98))
+            (label_ref 91)
+            (pc))) "Fibonacci.cpp":13:14 182 {*branchdi}
+     (expr_list:REG_DEAD (reg:DI 98)
+        (expr_list:REG_DEAD (reg:DI 97 [ n ])
+            (int_list:REG_BR_PROB 118111604 (nil))))
+ -> 91)
+(note 106 33 5 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 5 106 6 3 (set (reg/v:DI 79 [ i ])
+        (const_int 1 [0x1])) "Fibonacci.cpp":9:7 135 {*movdi_64bit}
+     (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+(insn 6 5 7 3 (set (reg/v:DI 77 [ b ])
+        (const_int 1 [0x1])) "Fibonacci.cpp":8:7 135 {*movdi_64bit}
+     (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+(insn 7 6 39 3 (set (reg/v:DI 74 [ a ])
+        (const_int 0 [0])) "Fibonacci.cpp":7:7 135 {*movdi_64bit}
+     (expr_list:REG_EQUAL (const_int 0 [0])
+        (nil)))
+(insn 39 7 66 3 (set (reg/f:DI 118)
+        (symbol_ref:DI ("_ZSt4cout") [flags 0xc0]  <var_decl 0x775ee842b120 cout>)) "Fibonacci.cpp":16:17 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (symbol_ref:DI ("_ZSt4cout") [flags 0xc0]  <var_decl 0x775ee842b120 cout>)
+        (nil)))
+(insn 66 39 85 3 (set (reg/f:DI 119)
+        (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x775ee8831d00 do_widen>)) 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (symbol_ref/i:DI ("_ZNKSt5ctypeIcE8do_widenEc") [flags 0x3]  <function_decl 0x775ee8831d00 do_widen>)
+        (nil)))
+(code_label 85 66 34 4 15 (nil) [1 uses])
+(note 34 85 36 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(note 36 34 35 4 NOTE_INSN_DELETED)
+(insn 35 36 37 4 (set (reg/v:DI 73 [ b ])
+        (reg/v:DI 77 [ b ])) 135 {*movdi_64bit}
+     (nil))
+(insn 37 35 38 4 (set (reg/v:DI 77 [ b ])
+        (sign_extend:DI (plus:SI (subreg:SI (reg/v:DI 77 [ b ]) 0)
+                (subreg:SI (reg/v:DI 74 [ a ]) 0)))) "Fibonacci.cpp":15:11 5 {*addsi3_extended}
+     (expr_list:REG_DEAD (reg/v:DI 74 [ a ])
+        (nil)))
+(insn 38 37 117 4 (set (reg:DI 11 a1)
+        (reg/v:DI 77 [ b ])) "Fibonacci.cpp":16:17 135 {*movdi_64bit}
+     (nil))
+(insn 117 38 40 4 (set (reg:DI 10 a0)
+        (reg/f:DI 118)) "Fibonacci.cpp":16:17 135 {*movdi_64bit}
+     (nil))
+(call_insn 40 117 121 4 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>) [0 operator<< S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":16:17 254 {call_value_internal}
+     (expr_list:REG_DEAD (reg:DI 11 a1)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSolsEi") [flags 0x41]  <function_decl 0x775ee86a8000 operator<<>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:SI (use (reg:DI 11 a1))
+            (nil))))
+(insn 121 40 41 4 (set (reg:DI 121)
+        (reg:DI 10 a0)) "Fibonacci.cpp":16:17 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 10 a0)
+        (nil)))
+(insn 41 121 42 4 (set (reg/f:DI 78 [ _15 ])
+        (reg:DI 121)) "Fibonacci.cpp":16:17 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 121)
+        (nil)))
+(insn 42 41 43 4 (set (reg/f:DI 100 [ _15->_vptr.basic_ostream ])
+        (mem/f:DI (reg/f:DI 78 [ _15 ]) [2 _15->_vptr.basic_ostream+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (mem/f:DI (reg/f:DI 78 [ _15 ]) [2 _15->_vptr.basic_ostream+0 S8 A64])
+        (nil)))
+(insn 43 42 44 4 (set (reg:DI 101 [ MEM[(long int *)_20 + -24B] ])
+        (mem:DI (plus:DI (reg/f:DI 100 [ _15->_vptr.basic_ostream ])
+                (const_int -24 [0xffffffffffffffe8])) [9 MEM[(long int *)_20 + -24B]+0 S8 A64])) 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 100 [ _15->_vptr.basic_ostream ])
+        (nil)))
+(insn 44 43 45 4 (set (reg/f:DI 102)
+        (plus:DI (reg/f:DI 78 [ _15 ])
+            (reg:DI 101 [ MEM[(long int *)_20 + -24B] ]))) 4 {adddi3}
+     (expr_list:REG_DEAD (reg:DI 101 [ MEM[(long int *)_20 + -24B] ])
+        (nil)))
+(insn 45 44 46 4 (set (reg/f:DI 85 [ _27 ])
+        (mem/f:DI (plus:DI (reg/f:DI 102)
+                (const_int 240 [0xf0])) [6 MEM[(const struct __ctype_type * *)_23 + 240B]+0 S8 A64])) 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 102)
+        (nil)))
+(jump_insn 46 45 47 4 (set (pc)
+        (if_then_else (ne (reg/f:DI 85 [ _27 ])
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "/usr/riscv64-linux-gnu/include/c++/11/bits/basic_ios.h":49:7 182 {*branchdi}
+     (int_list:REG_BR_PROB 1073312332 (nil))
+ -> 50)
+(note 47 46 48 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(call_insn 48 47 49 5 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x775ee999e800 __throw_bad_cast>) [0 __throw_bad_cast S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/basic_ios.h":50:18 253 {call_internal}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZSt16__throw_bad_castv") [flags 0x41]  <function_decl 0x775ee999e800 __throw_bad_cast>)
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (nil)))
+    (nil))
+(barrier 49 48 50)
+(code_label 50 49 51 6 12 (nil) [1 uses])
+(note 51 50 52 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(note 52 51 54 6 NOTE_INSN_DELETED)
+(insn 54 52 55 6 (set (reg:DI 105 [ MEM[(const struct ctype *)_27]._M_widen_ok ])
+        (zero_extend:DI (mem:QI (plus:DI (reg/f:DI 85 [ _27 ])
+                    (const_int 56 [0x38])) [0 MEM[(const struct ctype *)_27]._M_widen_ok+0 S1 A64]))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 89 {zero_extendqidi2}
+     (nil))
+(jump_insn 55 54 56 6 (set (pc)
+        (if_then_else (eq (reg:DI 105 [ MEM[(const struct ctype *)_27]._M_widen_ok ])
+                (const_int 0 [0]))
+            (label_ref 60)
+            (pc))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":877:2 182 {*branchdi}
+     (expr_list:REG_DEAD (reg:DI 105 [ MEM[(const struct ctype *)_27]._M_widen_ok ])
+        (int_list:REG_BR_PROB 524845004 (nil)))
+ -> 60)
+(note 56 55 57 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 123 7 (set (reg:DI 87 [ _32 ])
+        (zero_extend:DI (mem:QI (plus:DI (reg/f:DI 85 [ _27 ])
+                    (const_int 67 [0x43])) [0 MEM[(const struct ctype *)_27]._M_widen[10]+0 S1 A8]))) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":878:51 89 {zero_extendqidi2}
+     (expr_list:REG_DEAD (reg/f:DI 85 [ _27 ])
+        (nil)))
+(jump_insn 123 57 124 7 (set (pc)
+        (label_ref 74)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":878:51 240 {jump}
+     (nil)
+ -> 74)
+(barrier 124 123 60)
+(code_label 60 124 61 8 13 (nil) [1 uses])
+(note 61 60 62 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 62 61 63 8 (set (reg:DI 10 a0)
+        (reg/f:DI 85 [ _27 ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":879:21 135 {*movdi_64bit}
+     (nil))
+(call_insn 63 62 64 8 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x775ee883a200 _M_widen_init>) [0 _M_widen_init S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":879:21 253 {call_internal}
+     (expr_list:REG_DEAD (reg:DI 10 a0)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNKSt5ctypeIcE13_M_widen_initEv") [flags 0x41]  <function_decl 0x775ee883a200 _M_widen_init>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 64 63 119 8 (set (reg/f:DI 106 [ MEM[(const struct ctype *)_27].D.37636._vptr.facet ])
+        (mem/f:DI (reg/f:DI 85 [ _27 ]) [2 MEM[(const struct ctype *)_27].D.37636._vptr.facet+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (mem/f:DI (reg/f:DI 85 [ _27 ]) [2 MEM[(const struct ctype *)_27].D.37636._vptr.facet+0 S8 A64])
+        (nil)))
+(insn 119 64 65 8 (set (reg:DI 87 [ _32 ])
+        (const_int 10 [0xa])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (nil))
+(insn 65 119 67 8 (set (reg/f:DI 89 [ _36 ])
+        (mem/f:DI (plus:DI (reg/f:DI 106 [ MEM[(const struct ctype *)_27].D.37636._vptr.facet ])
+                (const_int 48 [0x30])) [4 MEM[(int (*) () *)_35 + 48B]+0 S8 A64])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 106 [ MEM[(const struct ctype *)_27].D.37636._vptr.facet ])
+        (nil)))
+(jump_insn 67 65 68 8 (set (pc)
+        (if_then_else (eq (reg/f:DI 89 [ _36 ])
+                (reg/f:DI 119))
+            (label_ref:DI 74)
+            (pc))) 182 {*branchdi}
+     (int_list:REG_BR_PROB 858993460 (nil))
+ -> 74)
+(note 68 67 120 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 120 68 70 9 (set (reg:DI 11 a1)
+        (const_int 10 [0xa])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (nil))
+(insn 70 120 71 9 (set (reg:DI 10 a0)
+        (reg/f:DI 85 [ _27 ])) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 85 [ _27 ])
+        (nil)))
+(call_insn 71 70 122 9 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (reg/f:DI 89 [ _36 ]) [0 *OBJ_TYPE_REF(_36;_27->6) S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 254 {call_value_internal}
+     (expr_list:REG_DEAD (reg/f:DI 89 [ _36 ])
+        (expr_list:REG_DEAD (reg:DI 11 a1)
+            (expr_list:REG_CALL_DECL (nil)
+                (nil))))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:QI (use (reg:DI 11 a1))
+            (nil))))
+(insn 122 71 72 9 (set (reg:DI 122)
+        (reg:DI 10 a0)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 10 a0)
+        (nil)))
+(insn 72 122 74 9 (set (reg:DI 87 [ _32 ])
+        (reg:DI 122)) "/usr/riscv64-linux-gnu/include/c++/11/bits/locale_facets.h":880:23 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 122)
+        (nil)))
+(code_label 74 72 75 10 14 (nil) [2 uses])
+(note 75 74 82 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(note 82 75 86 10 NOTE_INSN_DELETED)
+(note 86 82 76 10 NOTE_INSN_DELETED)
+(insn 76 86 77 10 (set (reg:DI 11 a1)
+        (reg:DI 87 [ _32 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg:DI 87 [ _32 ])
+        (nil)))
+(insn 77 76 78 10 (set (reg:DI 10 a0)
+        (reg/f:DI 78 [ _15 ])) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 78 [ _15 ])
+        (nil)))
+(call_insn 78 77 81 10 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x775ee86a8a00 put>) [0 put S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":685:19 254 {call_value_internal}
+     (expr_list:REG_DEAD (reg:DI 11 a1)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo3putEc") [flags 0x41]  <function_decl 0x775ee86a8a00 put>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:QI (use (reg:DI 11 a1))
+            (nil))))
+(call_insn 81 78 88 10 (parallel [
+            (set (reg:DI 10 a0)
+                (call (mem:SI (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x775ee86a8d00 flush>) [0 flush S4 A32])
+                    (const_int 0 [0])))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/ostream":707:24 254 {call_value_internal}
+     (expr_list:REG_UNUSED (reg:DI 10 a0)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSo5flushEv") [flags 0x41]  <function_decl 0x775ee86a8d00 flush>)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 88 81 83 10 (set (reg:DI 112 [ n ])
+        (sign_extend:DI (mem/c:SI (plus:DI (reg/f:DI 65 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [5 n+0 S4 A32]))) "Fibonacci.cpp":13:14 90 {extendsidi2}
+     (nil))
+(insn 83 88 84 10 (set (reg/v:DI 79 [ i ])
+        (sign_extend:DI (plus:SI (subreg:SI (reg/v:DI 79 [ i ]) 0)
+                (const_int 1 [0x1])))) "Fibonacci.cpp":18:11 5 {*addsi3_extended}
+     (nil))
+(insn 84 83 90 10 (set (reg/v:DI 74 [ a ])
+        (reg/v:DI 73 [ b ])) 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/v:DI 73 [ b ])
+        (nil)))
+(jump_insn 90 84 91 10 (set (pc)
+        (if_then_else (gt (reg:DI 112 [ n ])
+                (reg/v:DI 79 [ i ]))
+            (label_ref:DI 85)
+            (pc))) "Fibonacci.cpp":13:14 182 {*branchdi}
+     (expr_list:REG_DEAD (reg:DI 112 [ n ])
+        (int_list:REG_BR_PROB 955630228 (nil)))
+ -> 85)
+(code_label 91 90 92 11 11 (nil) [1 uses])
+(note 92 91 98 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 98 92 99 11 (parallel [
+            (set (reg:DI 116)
+                (unspec:DI [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 65 frame)
+                                (const_int -8 [0xfffffffffffffff8])) [14 D.49567+0 S8 A64])
+                        (mem/v/f/c:DI (reg/f:DI 117) [14 __stack_chk_guard+0 S8 A64])
+                    ] UNSPEC_COPYSIGN))
+            (clobber (reg:DI 124))
+        ]) "Fibonacci.cpp":20:1 270 {stack_protect_test_di}
+     (expr_list:REG_DEAD (reg/f:DI 117)
+        (expr_list:REG_UNUSED (reg:DI 124)
+            (nil))))
+(jump_insn 99 98 111 11 (set (pc)
+        (if_then_else (eq (reg:DI 116)
+                (const_int 0 [0]))
+            (label_ref 102)
+            (pc))) "Fibonacci.cpp":20:1 182 {*branchdi}
+     (expr_list:REG_DEAD (reg:DI 116)
+        (int_list:REG_BR_PROB 1073312332 (nil)))
+ -> 102)
+(note 111 99 100 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(call_insn 100 111 101 12 (parallel [
+            (call (mem:SI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x775ee8030700 __stack_chk_fail>) [0 __stack_chk_fail S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "Fibonacci.cpp":20:1 253 {call_internal}
+     (expr_list:REG_CALL_DECL (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x775ee8030700 __stack_chk_fail>)
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+(barrier 101 100 102)
+(code_label 102 101 112 13 16 (nil) [1 uses])
+(note 112 102 103 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 103 112 104 13 (set (reg/i:DI 10 a0)
+        (const_int 0 [0])) "Fibonacci.cpp":20:1 135 {*movdi_64bit}
+     (nil))
+(insn 104 103 125 13 (use (reg/i:DI 10 a0)) "Fibonacci.cpp":20:1 -1
+     (nil))
+(note 125 104 0 NOTE_INSN_DELETED)
+
+;; Function _GLOBAL__sub_I_main (_GLOBAL__sub_I_main, funcdef_no=2295, decl_uid=49420, cgraph_uid=1029, symbol_order=1204) (executed once)
+
+Starting decreasing number of live ranges...
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+Reg 72 uninteresting
+;; 1 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2
+;; 2 succs { 1 }
+Building IRA IR
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+init_insns for 72: (insn_list:REG_DEP_TRUE 5 (nil))
+
+Pass 0 for finding pseudo/allocno costs
+
+    a0 (r72,l0) best GR_REGS, allocno GR_REGS
+
+  a0(r72,l0) costs: SIBCALL_REGS:4000,4000 JALR_REGS:4000,4000 GR_REGS:4000,4000 MEM:15000,15000
+
+
+Pass 1 for finding pseudo/allocno costs
+
+    r72: preferred GR_REGS, alternative NO_REGS, allocno GR_REGS
+
+  a0(r72,l0) costs: GR_REGS:4000,4000 MEM:25000,25000
+
+   Insn 12(l0): point = 0
+   Insn 11(l0): point = 2
+   Insn 10(l0): point = 4
+   Insn 9(l0): point = 6
+   Insn 7(l0): point = 8
+   Insn 6(l0): point = 10
+   Insn 5(l0): point = 12
+ a0(r72): [5..12]
+Compressing live ranges: from 15 to 2 - 13%
+Ranges after the compression:
+ a0(r72): [0..1]
++++Allocating 0 bytes for conflict table (uncompressed size 8)
+;; a0(r72,l0) conflicts:
+;;     total conflict hard regs:
+;;     conflict hard regs:
+
+
+  pref0:a0(r72)<-hr10@1000
+  pref1:a0(r72)<-hr11@2000
+  regions=1, blocks=3, points=2
+    allocnos=1 (big 0), copies=0, conflicts=0, ranges=1
+
+**** Allocnos coloring:
+
+
+  Loop 0 (parent -1, header bb2, depth 0)
+    bbs: 2
+    all: 0r72
+    modified regnos: 72
+    border:
+    Pressure: ALL_REGS=4
+    Hard reg set forest:
+      0:( 1 5-63)@0
+        1:( 5-11 13-31)@42000
+      Allocno a0r72 of GR_REGS(28) has 26 avail. regs  5-11 13-31, node:  5-11 13-31 (confl regs =  0-4 12 32-65)
+      Forming thread from colorable bucket:
+      Pushing a0(r72,l0)(cost 0)
+      Popping a0(r72,l0)  --         assign reg 8
+Disposition:
+    0:r72  l0     8
+New iteration of spill/restore move
++++Costs: overall 4000, reg 4000, mem 0, ld 0, st 0, move 0
++++       move loops 0, new jumps 0
+
+
+_GLOBAL__sub_I_main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [zero] 3 [gp] 4 [tp] 5 [t0] 6 [t1] 7 [t2] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 28 [t3] 29 [t4] 30 [t5] 31 [t6] 32 [ft0] 33 [ft1] 34 [ft2] 35 [ft3] 36 [ft4] 37 [ft5] 38 [ft6] 39 [ft7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 60 [ft8] 61 [ft9] 62 [ft10] 63 [ft11]
+;;  hardware regs used 	 2 [sp] 64 [arg] 65 [frame]
+;;  regular block artificial uses 	 2 [sp] 8 [s0] 64 [arg] 65 [frame]
+;;  eh block artificial uses 	 2 [sp] 8 [s0] 64 [arg] 65 [frame]
+;;  entry block defs 	 1 [ra] 2 [sp] 8 [s0] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 64 [arg] 65 [frame]
+;;  exit block uses 	 1 [ra] 2 [sp] 8 [s0] 65 [frame]
+;;  regs ever live 	 1 [ra] 2 [sp] 10 [a0] 11 [a1] 12 [a2]
+;;  ref usage 	r0={2d} r1={2d,1u} r2={1d,4u} r3={2d} r4={2d} r5={2d} r6={2d} r7={2d} r8={1d,2u} r10={5d,2u} r11={4d,1u} r12={4d,1u} r13={3d} r14={3d} r15={3d} r16={3d} r17={3d} r28={2d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={2d} r37={2d} r38={2d} r39={2d} r42={3d} r43={3d} r44={3d} r45={3d} r46={3d} r47={3d} r48={3d} r49={3d} r60={2d} r61={2d} r62={2d} r63={2d} r64={1d,1u} r65={1d,2u} r72={1d,2u} 
+;;    total ref usage 119{103d,16u,0e} in 7{5 regular + 2 call} insns.
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (reg/f:DI 72)
+        (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (expr_list:REG_EQUIV (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(insn 6 5 7 2 (set (reg:DI 10 a0)
+        (reg/f:DI 72)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+        (nil)))
+(call_insn 7 6 9 2 (parallel [
+            (call (mem:SI (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x775ee8af8500 __ct_comp >) [0 __ct_comp  S4 A32])
+                (const_int 0 [0]))
+            (clobber (reg:SI 1 ra))
+        ]) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 253 {call_internal}
+     (expr_list:REG_DEAD (reg:DI 10 a0)
+        (expr_list:REG_CALL_DECL (symbol_ref:DI ("_ZNSt8ios_base4InitC1Ev") [flags 0x41]  <function_decl 0x775ee8af8500 __ct_comp >)
+            (nil)))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (nil)))
+(insn 9 7 10 2 (set (reg:DI 12 a2)
+        (symbol_ref:DI ("__dso_handle") [flags 0xc2]  <var_decl 0x775ee7f332d0 __dso_handle>)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 11 a1)
+        (reg/f:DI 72)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (expr_list:REG_DEAD (reg/f:DI 72)
+        (expr_list:REG_EQUAL (symbol_ref:DI ("*.LANCHOR0") [flags 0x182])
+            (nil))))
+(insn 11 10 12 2 (set (reg:DI 10 a0)
+        (symbol_ref:DI ("_ZNSt8ios_base4InitD1Ev") [flags 0x41]  <function_decl 0x775ee8af8700 __dt_comp >)) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 135 {*movdi_64bit}
+     (nil))
+(call_insn/j 12 11 13 2 (set (reg:DI 10 a0)
+        (call (mem:SI (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x775ee7f9b100 __cxa_atexit>) [0 __cxa_atexit S4 A32])
+            (const_int 0 [0]))) "/usr/riscv64-linux-gnu/include/c++/11/iostream":74:25 252 {sibcall_value_internal}
+     (expr_list:REG_DEAD (reg:DI 12 a2)
+        (expr_list:REG_DEAD (reg:DI 11 a1)
+            (expr_list:REG_UNUSED (reg:DI 10 a0)
+                (expr_list:REG_CALL_DECL (symbol_ref:DI ("__cxa_atexit") [flags 0x41]  <function_decl 0x775ee7f9b100 __cxa_atexit>)
+                    (expr_list:REG_EH_REGION (const_int 0 [0])
+                        (nil))))))
+    (expr_list:DI (use (reg:DI 10 a0))
+        (expr_list:DI (use (reg:DI 11 a1))
+            (expr_list:DI (use (reg:DI 12 a2))
+                (nil)))))
+(barrier 13 12 0)

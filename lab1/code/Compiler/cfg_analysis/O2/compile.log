@@ -1,0 +1,26 @@
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/ccPolQUI.o: in function `.L6':
+Fibonacci.cpp:(.text+0x22): undefined reference to `std::ostream::put(char)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/ccPolQUI.o: in function `.L0 ':
+Fibonacci.cpp:(.text+0x2e): undefined reference to `std::ostream::flush()'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x32): undefined reference to `std::ctype<char>::_M_widen_init() const'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text+0x50): undefined reference to `std::__throw_bad_cast()'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x16): undefined reference to `std::cin'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x2e): undefined reference to `std::istream::operator>>(int&)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x34): undefined reference to `std::cout'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x3c): undefined reference to `std::ostream::operator<<(int)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x46): undefined reference to `std::cout'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x4e): undefined reference to `std::ostream::operator<<(int)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x64): undefined reference to `std::cout'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x7c): undefined reference to `std::ostream::put(char)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: Fibonacci.cpp:(.text.startup+0x80): undefined reference to `std::ostream::flush()'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/ccPolQUI.o: in function `.L14':
+Fibonacci.cpp:(.text.startup+0x98): undefined reference to `std::ostream::operator<<(int)'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/ccPolQUI.o: in function `.L15':
+Fibonacci.cpp:(.text.startup+0xb2): undefined reference to `std::ctype<char>::_M_widen_init() const'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/ccPolQUI.o: in function `.L11':
+Fibonacci.cpp:(.text.startup+0xec): undefined reference to `std::__throw_bad_cast()'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/ccPolQUI.o: in function `.L0 ':
+Fibonacci.cpp:(.text.startup+0x104): undefined reference to `std::ios_base::Init::Init()'
+/usr/lib/gcc-cross/riscv64-linux-gnu/11/../../../../riscv64-linux-gnu/bin/ld: /tmp/ccPolQUI.o: in function `.L20':
+Fibonacci.cpp:(.text.startup+0x116): undefined reference to `std::ios_base::Init::~Init()'
+collect2: error: ld returned 1 exit status

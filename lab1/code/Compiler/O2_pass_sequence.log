@@ -1,0 +1,1 @@
+-debug-pass does not work with the new PM, either use -debug-pass-manager, or use the legacy PM (-enable-new-pm=0)
